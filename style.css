@@ -1,0 +1,267 @@
+@font-face {
+  font-family: Circe;
+  font-weight: 200;
+  src: local('Circe Light'), local('Circe-Light'), url('fonts/Circe-Light.woff2') format('woff2'), url('fonts/Circe-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: Circe;
+  font-weight: 400;
+  src: local('Circe Regular'), local('Circe-Regular'), url('fonts/Circe-Regular.woff2') format('woff2'), url('fonts/Circe-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Circe;
+  font-weight: 600;
+  src: local('Circe Bold'), local('Circe-Bold'), url('fonts/Circe-Bold.woff2') format('woff2'), url('fonts/Circe-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: Circe;
+  font-weight: 800;
+  src: local('Circe ExtraBold'), local('Circe-ExtraBold'), url('fonts/Circe-ExtraBold.woff2') format('woff2'), url('fonts/Circe-ExtraBold.woff') format('woff');
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: Circe, sans-serif;
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  line-height: 1.15;
+  background: #fff;
+  background-image: url(layout.jpg);
+  background-position: 50% 0;
+  min-height: 10136px;
+  color: #161616;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+  background-image:url(images/header-bg.jpg);
+  background-position: 50% 0;
+  background-repeat: repeat-x;
+  min-width:1538px;
+}
+
+a {
+  background-color: transparent;
+  text-decoration-skip: objects;
+  text-decoration: none;
+  color: inherit;
+  cursor:pointer;
+
+}
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  padding: 30px 35px 15px 150px;
+  position: relative;
+}
+
+.company-name {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 11px;
+  left: 48px;
+}
+
+.header-right {
+  padding: 34px 30px 15px 15px;
+}
+
+.header-button {
+  background-color: #be0804;
+  padding: 15px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #fefefe;
+  background-image: linear-gradient(#df0803, #be0804);
+  border: 0;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.phone {
+  color: #1f2025;
+  font-size: 1.75rem;
+  background-image: url(images/phone.png);
+  padding-left: 30px;
+  vertical-align: middle;
+  background-position: 0 50%;
+}
+
+.phone small {
+  font-size: 1.125rem;
+  vertical-align: baseline;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 50px 31px;
+  font-size: 0.6875rem;
+  color: #1e1e1f;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  padding: 4px 10px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a.active {
+  border-color: #f4190e;
+}
+
+.promo {
+  max-width: 1538px;
+  margin: 0 auto 19px;
+  display: flex;
+  align-items: stretch;
+  height: 484px;
+}
+
+.promo-banner {
+  width: 501px;
+  margin-right: 16px;
+  background-image: url(images/mans.jpg);
+  background-size: cover;
+  font-size: 3.275rem;
+  display: flex;
+  padding: 30px 38px;
+  color: rgba(255, 255, 255, 0.6);
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.slider {
+  flex-grow: 1;
+  position: relative;
+  background-image:url(images/desktop.jpg);
+  text-transform: uppercase;
+  font-size:1.3925rem;
+  color:#fff;
+  font-weight: 800;
+  line-height: 1.4;
+
+}
+
+.slider-left,
+.slider-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(images/slider-left.png);
+  border: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.slider-right {
+  background-image: url(images/slider-right.png);
+  right: 0;
+  left: auto;
+}
+.slider-slide {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  padding:145px 150px 0;
+
+}
+
+.slider-title {
+  font-size:3.54rem;
+ color:#ffe400;
+ line-height: 1.15;
+ margin-bottom:20px;
+
+}
+
+
+
+.woman {
+  width: 501px;
+  margin-left:14px;
+  background-image:url(images/woman.jpg);
+  font-size:1.87rem;
+  background-size: cover;
+  display:flex;
+  padding: 20px 40px;
+  color: rgba(255, 255, 255, 0.33);
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-weight: 600;
+
+
+
+}
