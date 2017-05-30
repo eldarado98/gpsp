@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+    <div style="background:#fff url(images/header-bg.jpg) repeat-x 50% 0">
     <header class="header">
       <div class="header-left">
         <img class="logo" src="images/logo.png" alt="ЗАО ГОРПРОМСТРОЙКПРОЕКТ" width="74" height="83"/>
@@ -23,7 +24,7 @@
     <nav>
       <ul>
         <li><a href="#">Главная</a></li>
-        <li><a class="active" href="#">Почему нас выбирают</a></li>
+        <li><a href="#">Почему нас выбирают</a></li>
         <li><a href="#">Наша команда</a></li>
         <li><a href="#">Услуги</a></li>
         <li><a href="#">Наши работы</a></li>
@@ -45,39 +46,45 @@
         <button class="slider-right" type="button">Вправо</button>
       </div>
     </div>
-    <div style="display:none">
-    <img src="images/banner7.jpg" alt=""/>
-    <div class="woman">Индивидуальное проектирование домов</div>
-    <form>
-      <h3>Пригласите нас на тендер</h3>
-      <p>Заполните форму для подачи заявки.</p>
-      <p class="shield">Мы гарантируем приватность оставленных данных</p>
-      <input type="text" name="Name" placeholder="Ваше имя"/>
-      <input type="tel" name="tel" placeholder="Телефон"/>
-      <input type="email" name="email" placeholder="E-mail"/>
-      <button>Отправить</button>
-    </form>
-    <div>
-      <h2>Факторы Качества</h2>
-      <ul>
-        <li class="check">Аттестат 2й категории</li>
-        <li class="check">ISO 9001</li>
-        <li class="check">BIM-технологии</li>
-        <li class="check">Опыт работы в крупных проектах</li>
-        <li class="check">Высококвалифицированные специалисты</li>
+    <div class="tender">
+      <form class="form">
+        <div class="form-text">
+          <h3 class="form-title">Пригласите нас на тендер</h3>
+          <p class="form-desc">Заполните форму для подачи заявки.</p>
+          <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
+        </div>
+        <div class="form-fields">
+          <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
+          <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+          <input class="form-input" type="email" name="email" placeholder="E-mail"/>
+          <button class="form-button">Отправить</button>
+        </div>
+      </form>
+      <div class="woman">Индивидуальное проектирование домов</div>
+    </div>
+    <div class="container">
+      <h2 class="title-factors">Факторы Качества</h2>
+      <ul class="features">
+        <li><img src="images/logo1.png" alt="" width="46" height="46"/> Аттестат 2й категории</li>
+        <li><img src="images/logo1.png" alt="" width="46" height="46"/>ISO 9001</li>
+        <li><img src="images/logo1.png" alt="" width="46" height="46"/>BIM-технологии</li>
+        <li><img src="images/logo1.png" alt="" width="46" height="46"/>Опыт работы в крупных проектах</li>
+        <li><img src="images/logo1.png" alt="" width="46" height="46"/>Высококвалифицированные специалисты</li>
       </ul>
-      <h2>Почему нам доверяют</h2>
-      <ul>
-        <li class="check">Комплексный подход</li>
-        <li class="Transparency-work">Прозрачность выполнения работ</li>
-        <li class="deadline">Соблюдение сроков</li>
-        <li class="Attention">Внимание к заказчику</li>
-        <li class="Efficiency">Оперативность</li>
+    </div>
+    <div class="container">
+      <h2 class="title-trust">Почему нам доверяют</h2>
+      <ul class="features">
+        <li><img src="images/logo1.png" alt="" width="46" height="46"/>Комплексный подход</li>
+        <li><img src="images/transparency.png" alt="" width="57" height="47"/>Прозрачность<br/> выполнения работ</li>
+        <li><img src="images/deadline.png" alt="" width="60" height="52"/>Соблюдение<br/> сроков</li>
+        <li><img src="images/attention.png" alt="" width="61" height="56"/>Внимание <br/>к заказчику</li>
+        <li><img src="images/efficiency.png" alt="" width="46" height="54"/>Оперативность</li>
       </ul>
-      <img src="images/mans2.jpg" alt=""/>
-      <img src="images/pen.png" alt=""/>
-      <p>МЫ ОДНА ИЗ КОМПАНИЙ, КОТОРАЯ РАБОТАЕТ С ТЕХНОЛОГИЕЙ REVIT BIM TECHNOLOGY AUTODESK (3D МОДЕЛИ)</p>
-      <ul>
+    </div>
+    <div class="technology">
+      <h2 class="technology-title">МЫ ОДНА ИЗ КОМПАНИЙ,<br/> КОТОРАЯ РАБОТАЕТ С ТЕХНОЛОГИЕЙ REVIT BIM TECHNOLOGY AUTODESK (3D МОДЕЛИ)</h2>
+      <ul class="technology-list">
         <li class="okey">Визуальная оценка проекта</li>
         <li class="okey">Ускорение процесса проектирования</li>
         <li class="okey">Координация всех процессов</li>
@@ -85,79 +92,107 @@
         <li class="okey">Безупречное качество</li>
       </ul>
     </div>
-    <div>
-      <img src="images/banner1.jpg" alt=""/>
-      <p>Проблемы, с которыми вы можете столкнуться при работе с некомпетентными проектировщиками</p>
-      <ul>
-        <li class="deadline">Несоблюдение сроков</li>
-        <li class="dislike">Непрофессионализм в работе</li>
-        <li class="control">Отсутствие проектного контроля "до и после"</li>
-        <li class="technology">Устаревшие технологии</li>
-        <li class="garant">Нет гарантий согласования</li>
-        <li class="community">Некомфортная обратная связь</li>
+    <div class="problems">
+      <div class="problems-title">
+        <h2>Проблемы, с которыми вы можете столкнуться<br/> при работе с некомпетентными проектировщиками</h2>
+      </div>
+      <div class="container">
+        <ul class="features problems-list">
+          <li><img src="images/deadline.png" alt="" width="60" height="52"/>Несоблюдение<br/> сроков</li>
+          <li><img src="images/dislike.png" alt="" width="51" height="66"/>Непрофессионализм <br/> в работе</li>
+          <li><img src="images/control.png" alt="" width="56" height="58"/>Отсутствие проектного<br/> контроля "до и после"</li>
+          <li><img src="images/technology.png" alt="" width="57" height="60"/>Устаревшие <br/>технологии</li>
+          <li><img src="images/garant.png" alt="" width="52" height="53"/>Нет гарантий<br/> согласования</li>
+          <li><img src="images/community.png" alt="" width="63" height="66"/>Некомфортная <br/>обратная связь</li>
+        </ul>
+      </div>
+      <div class="company">
+        <h2 class="company-title">О компании</h2>
+        <div class="company-text">
+          <div class="company-headline">
+            Ревит Бин Технолоджи
+            <small>(3D моделирование)</small>
+          </div>
+          <p>Kомпания <span>ЗАО «Горпромстройпроект»</span> специализируется на комплексном управлении проектированием − от создания концепции и предварительных инжиниринговых проработок до рабочего проектирования на основе современных технологий и требований Заказчика.</p>
+          <p>Используя потенциал своего проектного подразделения, ЗАО «Горпромстройпроект» выполняет весь комплекс проектных работ.</p>
+          <ul>
+            <li>Выполнение функций генерального проектировщика;</li>
+            <li>Разработка разделов проектной документации для объектов строительства первого-четвертого классов сложности;</li>
+            <li>Разработка предпроектной (прединвестиционной) документации;</li>
+          </ul>
+          <p>Разработка проектной документации ведется с учетом современных технологий строительства, с использованием эффективных конструктивных решений, применением качественных материалов, инженерных систем и технологического оборудования, обеспечивающих высокие эксплуатационные характеристики и надежность, современный внешний вид. Проектные работы ведутся в строгом соответствии с действующими нормами и правилами, а так же специализированными отраслевыми и технологическими требованиями и стандартами.</p>
+          <p>Мы занимаем по отношению к заказчику честную и открытую позицию и вместе решаем поставленные задачи.  Грамотное управление, отлаженный механизм работы  между проектным и строительным подразделениями  –  вот те факторы, которые позволяют нам выполнять взятые на себя обязательства.</p>
+        </div>
+        <form class="form company-form">
+          <div class="form-text">
+            <h3 class="form-title">Пригласите нас на переговоры</h3>
+            <p class="form-desc">Заполните форму связи с нами.</p>
+            <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
+          </div>
+          <div class="form-fields">
+            <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
+            <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+            <input class="form-input" type="text" name="time" placeholder="Куда удобно перезвонить?"/>
+            <button class="form-button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="task-title">Задачи которые решает наша команда ежедневно</h2>
+      <ul class="features task-list">
+        <li><img src="images/proect.png" alt="" width="87" height="77"/>Проектирование</li>
+        <li><img src="images/salam.png" alt="" width="86" height="63"/>Согласование</li>
+        <li><img src="images/search.png" alt="" width="61" height="64"/>Обследование зданий<br/> и сооружений</li>
+        <li><img src="images/design.png" alt="" width="53" height="68"/>Дизайн</li>
+        <li><img src="images/consul.png" alt="" width="63" height="75"/>Консалтинг</li>
+        <li><img src="images/build.png" alt="" width="63" height="63"/>Строительство<br/> и ремонт</li>
       </ul>
-      <h2>О компании</h2>
-      <h3>Ревит Бин Технолоджи</h3>
-      <p>(3D моделирование)</p>
-      <p>Kомпания ЗАО «Горпромстройпроект» специализируется на комплексном управлении проектированием − от создания концепции и предварительных инжиниринговых проработок до рабочего проектирования на основе современных технологий и требований Заказчика.</p>
-      <p>Используя потенциал своего проектного подразделения, ЗАО «Горпромстройпроект» выполняет весь комплекс проектных работ.</p>
-      <ul>
-        <li>Выполнение функций генерального проектировщика;</li>
-        <li>Разработка разделов проектной документации для объектов строительства первого-четвертого классов сложности;</li>
-        <li>Разработка предпроектной (прединвестиционной) документации;</li>
-      </ul>
-      <p>Разработка проектной документации ведется с учетом современных технологий строительства, с использованием эффективных конструктивных решений, применением качественных материалов, инженерных систем и технологического оборудования, обеспечивающих высокие эксплуатационные характеристики и надежность, современный внешний вид. Проектные работы ведутся в строгом соответствии с действующими нормами и правилами, а так же специализированными отраслевыми и технологическими требованиями и стандартами.</p>
-      <p>Мы занимаем по отношению к заказчику честную и открытую позицию и вместе решаем поставленные задачи.  Грамотное управление, отлаженный механизм работы  между проектным и строительным подразделениями  –  вот те факторы, которые позволяют нам выполнять взятые на себя обязательства.</p>
-      <img src="images/banner2.jpg" alt=""/>
-      <img src="images/banner3.jpg" alt=""/>
-      <h3>Пригласите нас на переговоры</h3>
-      <p>Заполните форму связи с нами</p>
-      <p class="shield">Мы гарантируем приватность оставленных данных</p>
-      <form>
-        <input type="text" name="Name" placeholder="Ваше имя"/>
-        <input type="tel" name="tel" placeholder="Телефон"/>
-        <input type="text" name="name" placeholder="Куда удобно перезвонить?"/>
-        <button>Отправить</button>
+    </div>
+    <div class="team">
+      <div class="container team-container">
+        <h2 class="team-title">Наша выдающаяся команда</h2>
+        <div class="team-lead">
+          <div>
+            <img src="images/foto1.jpg" alt="Иванов Иван Иванович" width="555" height="345"/>
+            <div class="team-name"><b>Директор</b> Иванов Иван Иванович</div>
+          </div>
+          <div>
+            <img src="images/foto2.jpg" alt="Иванов Иван Иванович" width="550" height="345"/>
+            <div class="team-name"><b>Директор</b> Иванов Иван Иванович</div>
+          </div>
+        </div>
+        <div class="team-office">
+          <div>
+            <div class="team-office-name">Минск 2 офиса</div>
+            <img src="images/foto4.jpg" alt="" width="370" height="272"/>
+          </div>
+          <div>
+            <div class="team-office-name">Брест 2 офиса</div>
+            <img src="images/foto4.jpg" alt="" width="370" height="272"/>
+          </div>
+          <div>
+            <div class="team-office-name">Грондо 1 офис</div>
+            <img src="images/foto4.jpg" alt="" width="370" height="272"/>
+          </div>
+        </div>
+      </div>
+      <form class="form team-form">
+        <div class="form-text">
+          <h3 class="form-title">Обратитесь<br/> к нам за бесплатной консультацией</h3>
+          <p class="form-desc">Заполните форму связи с нами.</p>
+          <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
+        </div>
+        <div class="form-fields">
+          <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
+          <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+          <input class="form-input" type="text" name="time" placeholder="Куда удобно перезвонить?"/>
+          <button class="form-button">Заказать</button>
+        </div>
       </form>
     </div>
-    <div>
-      <h2>Задачи которые решает наша команда ежедневно</h2>
-      <ul>
-        <li class="proect">Проектирование</li>
-        <li class="salam">Согласование</li>
-        <li class="search">Обследование зданий и сооружений</li>
-        <li class="design">Дизайн</li>
-        <li class="consul">Консалтинг</li>
-        <li class="build">Строительство и ремонт</li>
-      </ul>
     </div>
-    <div>
-      <h2>Наша выдающаяся команда</h2>
-      <img src="images/greybanner2.jpg" alt=""/>
-      <img src="images/foto1.jpg" alt=""/>
-      <h4>Директор</h4>
-      <p>Иванов Иван Иванович</p>
-      <img src="images/foto2.jpg" alt=""/>
-      <h4>Директор</h4>
-      <p>Иванов Иван Иванович</p>
-      <p>Минск 2 офиса</p>
-      <img src="images/foto4.jpg" alt=""/>
-      <p>Брест 1 офис</p>
-      <img src="images/foto4.jpg" alt=""/>
-      <p>Гродно 1 офис</p>
-      <img src="images/foto4.jpg" alt=""/>
-      <img src="images/banner8.jpg" alt=""/>
-      <img src="images/consultants.png" alt=""/>
-      <h3>Обратитесь к нам за бесплатной консультацией</h3>
-      <p>Заполните форму связи с нами</p>
-      <p class="shield">Мы гарантируем приватность оставленных данных</p>
-      <form>
-        <input type="text" name="Name" placeholder="Ваше имя"/>
-        <input type="tel" name="tel" placeholder="Телефон"/>
-        <input type="text" name="name" placeholder="Куда удобно перезвонить?"/>
-        <button>Отправить</button>
-      </form>
-    </div>
+    <div style="display:none">
     <div>
       <h2>Услуги</h2>
       <img src="images/intersection.png" alt=""/>
@@ -267,5 +302,5 @@
       <p>Разработка Сайта: Агентсво по привлечению клиентов XAMELEON.BY</p>
     </div>
     </div>
-</body>
+  </body>
 </html>

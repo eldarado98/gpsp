@@ -25,7 +25,6 @@
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat;
   box-sizing: inherit;
 }
 
@@ -40,14 +39,14 @@ html {
   min-height: 10136px;
   color: #161616;
   background-repeat: no-repeat;
+  min-width: 1540px;
 }
 
 body {
   margin: 0;
-  background-image:url(images/header-bg.jpg);
+  background-image: url(images/header-bg.jpg);
   background-position: 50% 0;
   background-repeat: repeat-x;
-  min-width:1538px;
 }
 
 a {
@@ -55,9 +54,13 @@ a {
   text-decoration-skip: objects;
   text-decoration: none;
   color: inherit;
-  cursor:pointer;
-
+  cursor: pointer;
 }
+
+img {
+  vertical-align: middle;
+}
+
 button {
   cursor: pointer;
 }
@@ -81,6 +84,12 @@ h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .header {
@@ -131,6 +140,10 @@ h2 {
   font-weight: 600;
 }
 
+.header-button:hover {
+  background-image: linear-gradient(#be0804, #df0803);
+}
+
 .phone {
   color: #1f2025;
   font-size: 1.75rem;
@@ -138,6 +151,7 @@ h2 {
   padding-left: 30px;
   vertical-align: middle;
   background-position: 0 50%;
+  background-repeat: no-repeat;
 }
 
 .phone small {
@@ -168,12 +182,12 @@ nav a {
   border-bottom: 2px solid transparent;
 }
 
-nav a.active {
+nav a:hover {
   border-color: #f4190e;
 }
 
 .promo {
-  max-width: 1538px;
+  max-width: 1540px;
   margin: 0 auto 19px;
   display: flex;
   align-items: stretch;
@@ -181,7 +195,7 @@ nav a.active {
 }
 
 .promo-banner {
-  width: 501px;
+  width: 500px;
   margin-right: 16px;
   background-image: url(images/mans.jpg);
   background-size: cover;
@@ -192,18 +206,20 @@ nav a.active {
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 800;
+  background-color: #9198a3;
+  flex-shrink: 0;
 }
 
 .slider {
   flex-grow: 1;
   position: relative;
-  background-image:url(images/desktop.jpg);
+  background-image: url(images/desktop.jpg);
   text-transform: uppercase;
-  font-size:1.3925rem;
-  color:#fff;
+  font-size: 1.3925rem;
+  color: #fff;
   font-weight: 800;
   line-height: 1.4;
-
+  background-color: #890000;
 }
 
 .slider-left,
@@ -229,39 +245,383 @@ nav a.active {
   right: 0;
   left: auto;
 }
+
 .slider-slide {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height:100%;
-  padding:145px 150px 0;
-
+  height: 100%;
+  padding: 145px 150px 0;
 }
 
 .slider-title {
-  font-size:3.54rem;
- color:#ffe400;
- line-height: 1.15;
- margin-bottom:20px;
-
+  font-size: 3.54rem;
+  color: #ffe400;
+  line-height: 1.15;
+  margin-bottom: 20px;
 }
 
+.tender {
+  max-width: 1540px;
+  margin: 0 auto 19px;
+  display: flex;
+  align-items: stretch;
+}
 
+.form {
+  background-image: url(images/desktop.jpg);
+  background-color: #890000;
+  padding: 28px 50px 28px 224px;
+  color: #fff;
+  display: flex;
+  flex-grow: 1;
+}
+
+.form-text {
+  flex-grow: 1;
+}
+
+.form-input {
+  margin: 0 0 6px 0;
+  font-size: 0.875rem;
+  color: #161616;
+  padding: 12px 20px;
+  background: #fff;
+  border: 0;
+  width: 100%;
+}
+
+.form-button {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #151c28;
+  background: #ffe400;
+  border: 0;
+  width: 100%;
+}
+
+.form-button:hover {
+  background-color: #e2c900;
+}
+
+.form-title {
+  font-weight: 800;
+  font-size: 3rem;
+  text-transform: uppercase;
+  border-bottom: 4px solid;
+  margin: 0;
+}
+
+.form-desc {
+  margin: 10px 0;
+}
+
+.form-shield {
+  color: #ffe400;
+  background-image: url(images/shield.png);
+  background-repeat: no-repeat;
+  padding: 6px 0 6px 28px;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.form-fields {
+  margin-left: 30px;
+  width: 320px;
+  flex-shrink: 0;
+}
 
 .woman {
-  width: 501px;
-  margin-left:14px;
-  background-image:url(images/woman.jpg);
-  font-size:1.87rem;
+  flex-shrink: 0;
+  margin-left: 14px;
+  background-image: url(images/woman.jpg);
+  font-size: 1.87rem;
   background-size: cover;
-  display:flex;
+  display: flex;
   padding: 20px 40px;
   color: rgba(255, 255, 255, 0.33);
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 600;
+  background-color: #b8bec9;
+  width: 500px;
+}
 
+.features {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 0 72px;
+  padding: 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #161616;
+}
 
+.features li {
+  width: 200px;
+  padding: 100px 10px 0;
+  position: relative;
+}
 
+.features img {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-factors {
+  margin: 54px 0 34px;
+}
+
+.title-trust {
+  margin: 94px 0 58px;
+}
+
+.technology {
+  max-width: 1540px;
+  margin: 0 auto;
+  display: flex;
+  min-height: 597px;
+  margin-bottom: 41px;
+}
+
+.technology-title {
+  width: 900px;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 70px 50px 50px 215px;
+  font-size: 2.0625rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  background-image: url(images/mans2.jpg);
+  background-color: #890000;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  position: relative;
+}
+
+.technology-title::before {
+  position: absolute;
+  bottom: -32px;
+  left: 55px;
+  width: 57px;
+  height: 565px;
+  background-image: url(images/pen.png);
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.technology-list {
+  font-weight: 800;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.technology-list li {
+  padding: 6px 10px 6px 85px;
+  background-image: url(images/okey.png);
+  background-repeat: no-repeat;
+  background-position: 26px 0;
+}
+
+.problems {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.problems-title {
+  max-width: 1540px;
+  background-image: url(images/banner1.jpg);
+  background-color: #5d636c;
+  margin: 0 0 74px;
+}
+
+.problems-title h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 27px 30px;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 1200px;
+}
+
+.problems-list {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #24272c;
+  letter-spacing: 0.2em;
+}
+
+.problems-list li {
+  width: auto;
+}
+
+.company {
+  max-width: 1540px;
+  margin: 0 auto 68px;
+  background-image: url(images/banner2.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.company-title {
+  margin: 0 0 40px;
+}
+
+.company-text {
+  max-width: 1200px;
+  padding: 0 365px 60px 30px;
+  font-size: 0.875rem;
+  color: #181f2b;
+  margin: 0 auto;
+}
+
+.company-text span {
+  color: #f00;
+}
+
+.company-headline {
+  font-weight: 800;
+  color: #161616;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0 0 40px;
+}
+
+.company-headline small {
+  font-size: 0.875rem;
+  display: block;
+  font-weight: 600;
+}
+
+.company-text p {
+  margin: 0 0 1.15em;
+}
+
+.company-text ul {
+  list-style: none;
+  margin: 0 0 1.15em;
+  padding: 0;
+}
+
+.company-text li::before {
+  content: '- ';
+}
+
+.company-form {
+  max-width: 1022px;
+  padding-left: 200px;
+}
+
+.company-form .form-title {
+  font-size: 2.5rem;
+  padding: 10px 0 18px;
+}
+
+.task-title {
+  margin: 0 0 90px;
+}
+
+.task-list {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+
+.task-list li {
+  width: auto;
+}
+
+.team {
+  background-image: url(images/greybanner2.jpg);
+  background-repeat: repeat-x;
+  background-position: 50% 0;
+  padding: 60px 0 0;
+}
+
+.team-title {
+  margin: 0 0 52px;
+}
+
+.team-lead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px 0 34px;
+}
+
+.team-name b {
+  font-weight: 800;
+  color: #f00;
+  display: block;
+}
+
+.team-container {
+  padding: 0 30px;
+}
+
+.team-office {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 135px;
+}
+
+.team-office-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #181f2b;
+  padding: 19px 20px;
+  margin-bottom: 15px;
+}
+
+.team-form {
+  padding-right: 567px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1540px;
+}
+
+.team-form .form-title {
+  font-size: 2rem;
+  padding-bottom: 6px;
+}
+
+.team-form::after {
+  background-image: url(images/consultants2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  width: 524px;
+  height: 327px;
+  content: '';
+  pointer-events: none;
 }
