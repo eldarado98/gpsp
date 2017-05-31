@@ -34,11 +34,8 @@ html {
   text-size-adjust: 100%;
   line-height: 1.15;
   background: #fff;
-  background-image: url(layout.jpg);
-  background-position: 50% 0;
   min-height: 10136px;
   color: #161616;
-  background-repeat: no-repeat;
   min-width: 1540px;
 }
 
@@ -328,6 +325,7 @@ nav a:hover {
   padding: 6px 0 6px 28px;
   font-size: 0.875rem;
   margin: 0;
+  background-position: 0 50%;
 }
 
 .form-fields {
@@ -556,6 +554,7 @@ nav a:hover {
   background-repeat: repeat-x;
   background-position: 50% 0;
   padding: 60px 0 0;
+  margin: 0 0 68px;
 }
 
 .team-title {
@@ -624,4 +623,498 @@ nav a:hover {
   height: 327px;
   content: '';
   pointer-events: none;
+}
+
+.services-title {
+  margin: 0 0 56px;
+}
+
+.services-list {
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list li {
+  width: 374px;
+  position: relative;
+  padding: 315px 20px 20px;
+  background-image: url(images/greyline.jpg);
+  background-repeat: repeat-x;
+  background-position: 0 275px;
+  margin-bottom: 50px;
+}
+
+.services-list li:hover {
+  background-image: url(images/redline.jpg);
+}
+
+.services-list img {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.services-button {
+  width: auto;
+  padding: 15px 22px;
+}
+
+.services-label {
+  margin: 0 0 18px;
+  min-height: 2.3em;
+}
+
+.projects {
+  margin: 0 0 60px;
+}
+
+.projects-title {
+  margin: -8px 0 28px;
+}
+
+.projects-nav {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #272727;
+  max-width: 800px;
+  margin: 0 auto 24px;
+  text-transform: uppercase;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.projects-nav a {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.projects-nav a:hover {
+  color: #f00;
+  border-color: #ec0802;
+}
+
+.projects-links {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #191919;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 13px;
+}
+
+.projects-links a:hover {
+  color: #fe0000;
+}
+
+.slider2 {
+  height: 586px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider2-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  margin-left: -950px;
+}
+
+.slider2-slide {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.slider2-left,
+.slider2-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(images/house-left.png);
+  border: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.slider2-right {
+  background-image: url(images/house-right.png);
+  right: 0;
+  left: auto;
+}
+
+.projects-footer {
+  max-width: 1200px;
+  margin: -48px auto 50px;
+  background-color: #414854;
+  color: #fff;
+  font-size: 0.875rem;
+  position: relative;
+  display: flex;
+}
+
+.projects-footer h4 {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 0 0 30px;
+}
+
+.projects-footer-left {
+  padding: 15px 30px 15px;
+  width: 540px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.projects-form {
+  padding-left: 24px;
+  flex-grow: 1;
+}
+
+.projects-form .form-fields {
+  width: 260px;
+}
+
+.projects-form .form-title {
+  font-size: 2rem;
+  padding: 8px 0 8px;
+  margin-bottom: 2px;
+}
+
+.brands {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 85px;
+}
+
+.brands-title {
+  margin: 0 0 58px;
+}
+
+.brands-container {
+  text-align: center;
+}
+
+.brands-button {
+  padding: 20px 60px 20px;
+  margin: 0 0 48px;
+}
+
+.form-consult {
+  max-width: 1540px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 610px;
+  padding-right: 180px;
+}
+
+.form-consult::before {
+  position: absolute;
+  left: 215px;
+  bottom: 0;
+  width: 346px;
+  height: 332px;
+  background-image: url(images/consultants.png);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  content: '';
+}
+
+.form-consult .form-title {
+  font-size: 2rem;
+  padding-bottom: 6px;
+}
+
+.sert {
+  background-image: url(images/greybanner.jpg);
+  background-repeat: repeat-x;
+  background-position: 50% 0;
+  padding: 101px 0 0;
+  margin-top: -21px;
+}
+
+.sert-title {
+  margin: 0 0 54px;
+}
+
+.karusel {
+  position: relative;
+  color: #353535;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.karusel ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.karusel li {
+  width: 258px;
+  list-style: none;
+}
+
+.karusel img {
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.karusel-dots {
+  text-align: center;
+  padding: 30px 0 35px;
+}
+
+.karusel-dot {
+  margin: 0 4px 0;
+  padding: 0;
+  border: 0;
+  background: #353535;
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.karusel-dot:hover {
+  background-color: #fe0000;
+}
+
+.karusel p {
+  margin: 30px 0 0;
+}
+
+.reviews-title {
+  margin: 32px 0 55px;
+}
+
+.org-tender {
+  background-image: url(images/banner9.jpg);
+  background-repeat: repeat-x;
+  background-position: 50% 0;
+  text-transform: uppercase;
+}
+
+.org-tender-title {
+  padding: 75px 100px 52px 420px;
+}
+
+.org-tender-title h2 {
+  text-align: left;
+  font-weight: 800;
+  font-size: 2.8125rem;
+  color: #1f2025;
+  margin: 0 0 15px;
+}
+
+.org-tender-title p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.form-org-tender {
+  max-width: 1540px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 610px;
+  padding-right: 180px;
+}
+
+.form-org-tender::before {
+  position: absolute;
+  left: 215px;
+  bottom: 0;
+  width: 273px;
+  height: 417px;
+  background-image: url(images/guy.png);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  content: '';
+}
+
+.form-org-tender .form-title {
+  font-size: 2rem;
+  padding: 12px 0;
+}
+
+.contact {
+  background-image: url(images/navigation.jpg);
+  background-position: 50% 0;
+  padding: 47px 0 44px;
+}
+
+.contact-container {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background-color: #414854;
+  background-image: url(images/contact-bg.jpg);
+  padding: 30px 180px 100px 36px;
+  color: #fff;
+  margin-left: auto;
+  width: 930px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-tel {
+  font-size: 1.4375rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.contact-address {
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.contact-address b {
+  display: block;
+  font-size: 1rem;
+  color: #ffe400;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.contact-socials {
+  margin-top: 25px;
+}
+
+.vk,
+.fb,
+.ok,
+.tw {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+  background-image: url(images/socials.png);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.fb {
+  background-position: -39px 0;
+}
+
+.ok {
+  background-position: -79px 0;
+}
+
+.tw {
+  background-position: -118px 0;
+}
+
+.contact-card-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-card-list li {
+  flex: 1;
+}
+
+.contact-title {
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-underline {
+  height: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-company {
+  padding: 32px 0 30px 100px;
+  position: relative;
+}
+
+.footer-company img {
+  position: absolute;
+  top: 21px;
+  left: 18px;
+}
+
+.footer-company-name {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.footer-tagline {
+  font-size: 0.625rem;
+  margin: 0;
+}
+
+.footer-rights {
+  font-size: 0.875rem;
+  color: #414854;
+  margin: 4px 0;
+}
+
+.footer-politics {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin: 4px 0;
+}
+
+.footer-dev {
+  position: relative;
+  padding: 30px 0 30px 52px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.625rem;
+}
+
+.footer-dev img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
 }
