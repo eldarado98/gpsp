@@ -17,7 +17,7 @@
       </div>
       <div class="header-right">
         <a class="phone" href="tel:375172693072"><small>+ 375 17</small> 269-30-72</a>
-        <button class="header-button" type="button">Заказать Звонок</button>
+        <button class="header-button modal-trigger" data-target="call" type="button">Заказать Звонок</button>
       </div>
     </header>
     <nav>
@@ -53,9 +53,9 @@
           <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
         </div>
         <div class="form-fields">
-          <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
-          <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
-          <input class="form-input" type="email" name="email" placeholder="E-mail"/>
+          <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+          <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
+          <input class="form-input" type="email" name="email" placeholder="E-mail" required/>
           <button class="form-button">Отправить</button>
         </div>
       </form>
@@ -129,8 +129,8 @@
             <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
           </div>
           <div class="form-fields">
-            <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
-            <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+            <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+            <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
             <input class="form-input" type="text" name="time" placeholder="Куда удобно перезвонить?"/>
             <button class="form-button">Отправить</button>
           </div>
@@ -183,8 +183,8 @@
           <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
         </div>
         <div class="form-fields">
-          <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
-          <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+          <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+          <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
           <input class="form-input" type="text" name="time" placeholder="Куда удобно перезвонить?"/>
           <button class="form-button">Заказать</button>
         </div>
@@ -196,32 +196,32 @@
         <li>
           <img src="images/intersection.png" alt="" width="150" height="150"/>
           <div class="services-label"> Проектирование дорог и транспортных сооружений любой сложности</div>
-          <button class="form-button services-button">Подробнее</button>
+          <button class="form-button services-button modal-trigger" data-target="service">Подробнее</button>
         </li>
         <li>
           <img src="images/factory.png" alt="" width="158" height="150"/>
           <div class="services-label">Промышленное проектирование</div>
-          <button class="form-button services-button">Подробнее</button>
+          <button class="form-button services-button modal-trigger" data-target="service">Подробнее</button>
         </li>
         <li>
           <img src="images/house.png" alt="" width="150" height="150"/>
           <div class="services-label">Гражданское проектирование</div>
-          <button class="form-button  services-button">Подробнее</button>
+          <button class="form-button  services-button modal-trigger" data-target="service">Подробнее</button>
         </li>
         <li>
           <img src="images/barn.png" alt="" width="150" height="150"/>
           <div class="services-label">Проектирование с/х Комплексов</div>
-          <button class="form-button  services-button">Подробнее</button>
+          <button class="form-button  services-button modal-trigger" data-target="service">Подробнее</button>
         </li>
         <li>
           <img src="images/pipe.png" alt="" width="135" height="127"/>
           <div class="services-label">Проектирование инженерных сетей</div>
-          <button class="form-button  services-button">Подробнее</button>
+          <button class="form-button  services-button modal-trigger" data-target="service">Подробнее</button>
         </li>
         <li>
           <img src="images/conveyor.png" alt="" width="149" height="147"/>
           <div class="services-label"> Логические проектирование</div>
-          <button class="form-button  services-button">Подбробнее</button>
+          <button class="form-button  services-button modal-trigger" data-target="service">Подбробнее</button>
         </li>
       </ul>
     </div>
@@ -265,8 +265,8 @@
             <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
           </div>
           <div class="form-fields">
-            <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
-            <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+            <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+            <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
             <button class="form-button">Заказать</button>
           </div>
         </form>
@@ -288,7 +288,21 @@
         <li><img src="images/setevaya-company.png" alt="" width="167" height="48"/></li>
         <li><img src="images/setevaya-company.png" alt="" width="167" height="48"/></li>
       </ul>
-      <button class="header-button brands-button" type="button">Показать еще</button>
+      <ul class="brands more-target hidden">
+        <li><img src="images/gruz-company.png" alt="" width="120" height="66"/></li>
+        <li><img src="images/reksoft.png" alt="" width="158" height="35"/></li>
+        <li><img src="images/dom-uprv-company.png" alt="" width="140" height="79"/></li>
+        <li><img src="images/setevaya-company.png" alt="" width="167" height="48"/></li>
+        <li><img src="images/setevaya-company.png" alt="" width="167" height="48"/></li>
+      </ul>
+      <ul class="brands more-target hidden">
+        <li><img src="images/gruz-company.png" alt="" width="120" height="66"/></li>
+        <li><img src="images/reksoft.png" alt="" width="158" height="35"/></li>
+        <li><img src="images/dom-uprv-company.png" alt="" width="140" height="79"/></li>
+        <li><img src="images/setevaya-company.png" alt="" width="167" height="48"/></li>
+        <li><img src="images/setevaya-company.png" alt="" width="167" height="48"/></li>
+      </ul>
+      <button class="header-button brands-button more-trigger" type="button">Показать еще</button>
     </div>
     <form class="form form-consult">
       <div class="form-text">
@@ -297,8 +311,8 @@
         <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
       </div>
       <div class="form-fields">
-        <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
-        <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
+        <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+        <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
         <input class="form-input" type="text" name="time" placeholder="Куда вам удобно перезвонить?"/>
         <button class="form-button">Заказать</button>
       </div>
@@ -358,16 +372,16 @@
         <h2>Вы организатор тендера?</h2>
         <p>Пригласите нас поучавствовать в тендер и мы предложим вам лучшие условия</p>
       </div>
-      <form class="form form-org-tender">
+      <form class="form org-tender-form">
       <div class="form-text">
         <h3 class="form-title">Подать заявку на участие в тендере</h3>
         <p class="form-desc">Заполните форму для связи с нами</p>
         <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
       </div>
       <div class="form-fields">
-        <input class="form-input" type="text" name="Name" placeholder="Ваше имя"/>
-        <input class="form-input" type="tel" name="tel" placeholder="Телефон"/>
-        <input class="form-input" type="email" name="email" placeholder="E-mail"/>
+        <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+        <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
+        <input class="form-input" type="email" name="email" placeholder="E-mail" required/>
         <button class="form-button">Участвовать</button>
       </div>
       </form>
@@ -430,5 +444,57 @@
       </div>
     </div>
     <div class="footer-underline header-button"></div>
+    <div id="call" class="modal hidden" tabindex="-1">
+      <div class="modal-container">
+        <div class="modal-content">
+          <form class="form callback">
+            <div class="form-text">
+              <p class="form-title">Заказать звонок <span>Мы перезвоним  вам в ближайшее время.</span></p>
+              <p class="form-desc">Заполните  форму для  связи с нами</p>
+              <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
+            </div>
+            <div class="form-fields">
+              <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+              <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
+              <button class="form-button">Заказать</button>
+            </div>
+          </form>
+          <button class="modal-close" type="button" title="Закрыть">+</button>
+        </div>
+      </div>
+    </div>
+    <div id="service" class="modal hidden" tabindex="-1">
+      <div class="modal-container">
+        <div class="modal-content">
+          <div class="service">
+            <div class="service-content">
+              <div class="service-image">
+                <img src="images/service.jpg" alt="" width="600" height="420"/>
+              </div>
+              <div class="service-text">
+                <h2 class="service-title">ПРОЕКТИРОВАНИЕ ДОРОГ И ТРАНСПОРТНЫХ СООРУЖЕНИЙ ЛЮБОЙ СЛОЖНОСТИ</h2>
+                <p><b>ЗАО «ГОРПРОМСТРОЙПРОЕКТ»</b> — ведущий комплексный разработчик проектных решений, осуществляющий проектирование в различных отраслях промышленности, включая технологически сложные объекты, а также объекты жилищно-гражданского назначения, инфраструктуры.</p>
+                <p>ЗАО «ГОРПРОМСТРОЙПРОЕКТ» выполняет в полном объёме функции генерального проектировщика, точно и в срок разрабатывает проектно-сметную документацию, а также реализует авторский надзор за ходом строительства.</p>
+                <p>Управление проектами осуществляется по <u>целям и срокам реализации</u>, обеспечиваются необходимые стандарты качества и безопасность проведения работ, ведется контроль исполнения бюджета и смет, особое внимание уделяется контрактным отношениям и обязательствам, а также охране безопасности труда, окружающей среды, противопожарной безопасности и другим важнейшим параметрам.</p>
+              </div>
+            </div>
+            <form class="form service-form">
+              <div class="form-text">
+                <p class="form-title">Заказать <span>проектирование дорог и транспортных сооружений любой сложности</span></p>
+                <p class="form-desc">Заполните  форму для  связи с нами</p>
+                <p class="form-shield">Мы гарантируем приватность оставленных данных</p>
+              </div>
+              <div class="form-fields">
+                <input class="form-input" type="text" name="Name" placeholder="Ваше имя" required/>
+                <input class="form-input" type="tel" name="tel" placeholder="Телефон" required/>
+                <button class="form-button">Заказать</button>
+              </div>
+            </form>
+          </div>
+          <button class="modal-close" type="button" title="Закрыть">+</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,25 +1,41 @@
 @font-face {
   font-family: Circe;
   font-weight: 200;
-  src: local('Circe Light'), local('Circe-Light'), url('fonts/Circe-Light.woff2') format('woff2'), url('fonts/Circe-Light.woff') format('woff');
+  src:
+    local('Circe Light'),
+    local('Circe-Light'),
+    url('fonts/Circe-Light.woff2') format('woff2'),
+    url('fonts/Circe-Light.woff') format('woff');
 }
 
 @font-face {
   font-family: Circe;
   font-weight: 400;
-  src: local('Circe Regular'), local('Circe-Regular'), url('fonts/Circe-Regular.woff2') format('woff2'), url('fonts/Circe-Regular.woff') format('woff');
+  src:
+    local('Circe Regular'),
+    local('Circe-Regular'),
+    url('fonts/Circe-Regular.woff2') format('woff2'),
+    url('fonts/Circe-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: Circe;
   font-weight: 600;
-  src: local('Circe Bold'), local('Circe-Bold'), url('fonts/Circe-Bold.woff2') format('woff2'), url('fonts/Circe-Bold.woff') format('woff');
+  src:
+    local('Circe Bold'),
+    local('Circe-Bold'),
+    url('fonts/Circe-Bold.woff2') format('woff2'),
+    url('fonts/Circe-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: Circe;
   font-weight: 800;
-  src: local('Circe ExtraBold'), local('Circe-ExtraBold'), url('fonts/Circe-ExtraBold.woff2') format('woff2'), url('fonts/Circe-ExtraBold.woff') format('woff');
+  src:
+    local('Circe ExtraBold'),
+    local('Circe-ExtraBold'),
+    url('fonts/Circe-ExtraBold.woff2') format('woff2'),
+    url('fonts/Circe-ExtraBold.woff') format('woff');
 }
 
 *,
@@ -41,9 +57,7 @@ html {
 
 body {
   margin: 0;
-  background-image: url(images/header-bg.jpg);
-  background-position: 50% 0;
-  background-repeat: repeat-x;
+  background: url(images/header-bg.jpg) repeat-x 50% 0;
 }
 
 a {
@@ -81,6 +95,10 @@ h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .container {
@@ -127,13 +145,12 @@ h2 {
 .header-button {
   background-color: #be0804;
   padding: 15px;
-  margin: 0;
+  margin: 0 0 0 20px;
   text-transform: uppercase;
   font-size: 0.75rem;
   color: #fefefe;
   background-image: linear-gradient(#df0803, #be0804);
   border: 0;
-  margin-left: 20px;
   font-weight: 600;
 }
 
@@ -144,11 +161,9 @@ h2 {
 .phone {
   color: #1f2025;
   font-size: 1.75rem;
-  background-image: url(images/phone.png);
+  background: url(images/phone.png) no-repeat 0 50%;
   padding-left: 30px;
   vertical-align: middle;
-  background-position: 0 50%;
-  background-repeat: no-repeat;
 }
 
 .phone small {
@@ -194,8 +209,7 @@ nav a:hover {
 .promo-banner {
   width: 500px;
   margin-right: 16px;
-  background-image: url(images/mans.jpg);
-  background-size: cover;
+  background: #9198a3 url(images/mans.jpg);
   font-size: 3.275rem;
   display: flex;
   padding: 30px 38px;
@@ -203,20 +217,18 @@ nav a:hover {
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 800;
-  background-color: #9198a3;
   flex-shrink: 0;
 }
 
 .slider {
   flex-grow: 1;
   position: relative;
-  background-image: url(images/desktop.jpg);
+  background: #890000 url(images/desktop.jpg);
   text-transform: uppercase;
   font-size: 1.3925rem;
   color: #fff;
   font-weight: 800;
   line-height: 1.4;
-  background-color: #890000;
 }
 
 .slider-left,
@@ -228,10 +240,8 @@ nav a:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url(images/slider-left.png);
+  background: url(images/slider-left.png) no-repeat 50% 50%;
   border: 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
@@ -267,8 +277,7 @@ nav a:hover {
 }
 
 .form {
-  background-image: url(images/desktop.jpg);
-  background-color: #890000;
+  background: #890000 url(images/desktop.jpg);
   padding: 28px 50px 28px 224px;
   color: #fff;
   display: flex;
@@ -320,12 +329,10 @@ nav a:hover {
 
 .form-shield {
   color: #ffe400;
-  background-image: url(images/shield.png);
-  background-repeat: no-repeat;
+  background: url(images/shield.png) no-repeat 0 50%;
   padding: 6px 0 6px 28px;
   font-size: 0.875rem;
   margin: 0;
-  background-position: 0 50%;
 }
 
 .form-fields {
@@ -337,16 +344,14 @@ nav a:hover {
 .woman {
   flex-shrink: 0;
   margin-left: 14px;
-  background-image: url(images/woman.jpg);
+  background: #b8bec9 url(images/woman.jpg);
   font-size: 1.87rem;
-  background-size: cover;
   display: flex;
   padding: 20px 40px;
   color: rgba(255, 255, 255, 0.33);
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 600;
-  background-color: #b8bec9;
   width: 500px;
 }
 
@@ -401,8 +406,7 @@ nav a:hover {
   font-weight: 800;
   color: #fff;
   text-transform: uppercase;
-  background-image: url(images/mans2.jpg);
-  background-color: #890000;
+  background: #890000 url(images/mans2.jpg);
   margin: 0;
   text-align: left;
   display: flex;
@@ -415,8 +419,7 @@ nav a:hover {
   left: 55px;
   width: 57px;
   height: 565px;
-  background-image: url(images/pen.png);
-  background-repeat: no-repeat;
+  background: url(images/pen.png) no-repeat;
   content: '';
 }
 
@@ -433,9 +436,7 @@ nav a:hover {
 
 .technology-list li {
   padding: 6px 10px 6px 85px;
-  background-image: url(images/okey.png);
-  background-repeat: no-repeat;
-  background-position: 26px 0;
+  background: url(images/okey.png) no-repeat 26px 0;
 }
 
 .problems {
@@ -445,8 +446,7 @@ nav a:hover {
 
 .problems-title {
   max-width: 1540px;
-  background-image: url(images/banner1.jpg);
-  background-color: #5d636c;
+  background: #5d636c url(images/banner1.jpg);
   margin: 0 0 74px;
 }
 
@@ -475,9 +475,7 @@ nav a:hover {
 .company {
   max-width: 1540px;
   margin: 0 auto 68px;
-  background-image: url(images/banner2.jpg);
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background: url(images/banner2.jpg) no-repeat 100% 100%;
 }
 
 .company-title {
@@ -550,9 +548,7 @@ nav a:hover {
 }
 
 .team {
-  background-image: url(images/greybanner2.jpg);
-  background-repeat: repeat-x;
-  background-position: 50% 0;
+  background: url(images/greybanner2.jpg) repeat-x 50% 0;
   padding: 60px 0 0;
   margin: 0 0 68px;
 }
@@ -614,8 +610,7 @@ nav a:hover {
 }
 
 .team-form::after {
-  background-image: url(images/consultants2.png);
-  background-repeat: no-repeat;
+  background: url(images/consultants2.png) no-repeat;
   position: absolute;
   right: 70px;
   bottom: 0;
@@ -645,9 +640,7 @@ nav a:hover {
   width: 374px;
   position: relative;
   padding: 315px 20px 20px;
-  background-image: url(images/greyline.jpg);
-  background-repeat: repeat-x;
-  background-position: 0 275px;
+  background: url(images/greyline.jpg) repeat-x 0 275px;
   margin-bottom: 50px;
 }
 
@@ -730,10 +723,9 @@ nav a:hover {
 
 .slider2-list {
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 -950px;
   padding: 0;
   white-space: nowrap;
-  margin-left: -950px;
 }
 
 .slider2-slide {
@@ -750,10 +742,8 @@ nav a:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url(images/house-left.png);
+  background: url(images/house-left.png) no-repeat 50% 50%;
   border: 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
@@ -839,8 +829,7 @@ nav a:hover {
   bottom: 0;
   width: 346px;
   height: 332px;
-  background-image: url(images/consultants.png);
-  background-repeat: no-repeat;
+  background: url(images/consultants.png) no-repeat;
   pointer-events: none;
   content: '';
 }
@@ -851,9 +840,7 @@ nav a:hover {
 }
 
 .sert {
-  background-image: url(images/greybanner.jpg);
-  background-repeat: repeat-x;
-  background-position: 50% 0;
+  background: url(images/serts-bg.jpg) repeat-x 50% 0;
   padding: 101px 0 0;
   margin-top: -21px;
 }
@@ -914,14 +901,12 @@ nav a:hover {
 }
 
 .org-tender {
-  background-image: url(images/banner9.jpg);
-  background-repeat: repeat-x;
-  background-position: 50% 0;
-  text-transform: uppercase;
+  background: url(images/banner9.jpg) repeat-x 50% 0;
 }
 
 .org-tender-title {
   padding: 75px 100px 52px 420px;
+  text-transform: uppercase;
 }
 
 .org-tender-title h2 {
@@ -938,7 +923,7 @@ nav a:hover {
   margin: 0;
 }
 
-.form-org-tender {
+.org-tender-form {
   max-width: 1540px;
   margin: 0 auto;
   position: relative;
@@ -946,26 +931,25 @@ nav a:hover {
   padding-right: 180px;
 }
 
-.form-org-tender::before {
+.org-tender-form::before {
   position: absolute;
   left: 215px;
   bottom: 0;
   width: 273px;
   height: 417px;
-  background-image: url(images/guy.png);
-  background-repeat: no-repeat;
+  background: url(images/guy.png) no-repeat;
   pointer-events: none;
   content: '';
 }
 
-.form-org-tender .form-title {
+.org-tender-form .form-title {
   font-size: 2rem;
-  padding: 12px 0;
+  padding: 16px 0;
+  margin-bottom: 16px;
 }
 
 .contact {
-  background-image: url(images/navigation.jpg);
-  background-position: 50% 0;
+  background: url(images/navigation.jpg) 50% 0;
   padding: 47px 0 44px;
 }
 
@@ -975,14 +959,11 @@ nav a:hover {
 }
 
 .contact-card {
-  background-color: #414854;
-  background-image: url(images/contact-bg.jpg);
+  background: #414854 url(images/contact-bg.jpg) no-repeat 0 100%;
   padding: 30px 180px 100px 36px;
   color: #fff;
   margin-left: auto;
   width: 930px;
-  background-repeat: no-repeat;
-  background-position: 0 100%;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
 }
 
@@ -1028,8 +1009,7 @@ nav a:hover {
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
-  background-image: url(images/socials.png);
-  background-repeat: no-repeat;
+  background: url(images/socials.png) no-repeat;
   margin-right: 10px;
 }
 
@@ -1117,4 +1097,123 @@ nav a:hover {
   top: 50%;
   left: 0;
   margin-top: -16px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.modal-content {
+  position: relative;
+  padding: 50px 30px;
+}
+
+.modal-close {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #bd0000;
+  font-size: 3rem;
+  font-weight: 200;
+  transform: rotate(45deg);
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  outline: 0;
+}
+
+.callback {
+  max-width: 820px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.callback .form-title {
+  font-size: 2rem;
+  padding-bottom: 16px;
+}
+
+.callback .form-title span {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.service {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  max-width: 1140px;
+}
+
+.service-form {
+  padding-left: 36px;
+  padding-right: 356px;
+  position: relative;
+}
+
+.service-form:after {
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  background: url(images/devushka-man.png) no-repeat;
+  pointer-events: none;
+  width: 309px;
+  height: 294px;
+  content: '';
+}
+
+.service-form .form-title {
+  font-size: 2rem;
+}
+
+.service-form .form-title span {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.service-content {
+  background-color: #fff;
+  font-size: 0.875rem;
+  display: flex;
+}
+
+.service-content b,
+.service-content u {
+  color: #f00;
+}
+
+.service-title {
+  font-weight: 800;
+  text-align: left;
+  font-size: 1rem;
+  margin: 0 0 18px;
+}
+
+.service-content p {
+  margin: 1.15em 0;
+  letter-spacing: 0.1em;
+}
+
+.service-text {
+  margin: 20px;
+}
+
+.service-image {
+  margin: 20px 0 20px 20px;
 }
