@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="style.css"/>
   </head>
-  <body>
+  <body id="home">
     <header class="header">
       <div class="header-left">
         <img class="logo" src="images/logo.png" alt="ЗАО ГОРПРОМСТРОЙКПРОЕКТ" width="74" height="83"/>
@@ -22,14 +22,14 @@
     </header>
     <nav>
       <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Почему нас выбирают</a></li>
-        <li><a href="#">Наша команда</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Наши работы</a></li>
-        <li><a href="#">Наши клиенты</a></li>
-        <li><a href="#">Сертификаты</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#about">Почему нас выбирают</a></li>
+        <li><a href="#team">Наша команда</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#portfolio">Наши работы</a></li>
+        <li><a href="#our-clients">Наши клиенты</a></li>
+        <li><a href="#certificates">Сертификаты</a></li>
+        <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
     <div class="promo">
@@ -37,8 +37,10 @@
       <div class="slider">
         <ul class="slider-slides">
           <li class="slider-slide">
-            <div class="slider-title">Профессиональное Проектирование</div>
-            <div>Комплексное проектирование<br/> от концепции до ввода в эксплуатацию</div>
+            <div>
+              <div class="slider-title">Профессиональное<br/> Проектирование</div>
+              <div class="slider-desc">Комплексное проектирование<br/> от концепции до ввода в эксплуатацию</div>
+            </div>
           </li>
         </ul>
         <button class="slider-left" type="button">Влево</button>
@@ -61,8 +63,8 @@
       </form>
       <div class="woman">Индивидуальное проектирование домов</div>
     </div>
-    <div class="container">
-      <h2 class="title-factors">Факторы Качества</h2>
+    <div id="about" class="factors container">
+      <h2 class="factors-title">Факторы Качества</h2>
       <ul class="features">
         <li><img src="images/logo1.png" alt="" width="46" height="46"/> Аттестат 2й категории</li>
         <li><img src="images/logo1.png" alt="" width="46" height="46"/>ISO 9001</li>
@@ -152,7 +154,7 @@
         <li><img src="images/build.png" alt="" width="63" height="63"/>Строительство<br/> и ремонт</li>
       </ul>
     </div>
-    <div class="team">
+    <div id="team" class="team">
       <div class="container team-container">
         <h2 class="team-title">Наша выдающаяся команда</h2>
         <div class="team-lead">
@@ -196,7 +198,7 @@
         </form>
       </div>
     </div>
-    <div class="container">
+    <div id="services" class="services container">
       <h2 class="services-title">Услуги</h2>
       <ul class="services-list">
         <li>
@@ -231,7 +233,7 @@
         </li>
       </ul>
     </div>
-    <div class="projects">
+    <div id="portfolio" class="projects">
       <div class="container">
         <h2 class="projects-title">Наши работы</h2>
         <ul class="projects-nav">
@@ -278,7 +280,7 @@
         </form>
       </div>
     </div>
-    <div class="container brands">
+    <div id="our-clients" class="container brands">
       <h2 class="brands-title">Нам доверяют</h2>
       <ul class="brands-list">
         <li><img src="images/gruz-company.png" alt="" width="120" height="66"/></li>
@@ -319,7 +321,7 @@
         </div>
       </form>
     </div>
-    <div class="cert">
+    <div id="certificates" class="cert">
       <div class="container">
         <h2 class="cert-title">Сертификаты</h2>
         <div class="carousel">
@@ -413,7 +415,7 @@
         </form>
       </div>
     </div>
-    <div class="contact">
+    <div id="contacts" class="contact">
       <div class="contact-map"></div>
       <div class="contact-container">
         <div class="contact-card-container">

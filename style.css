@@ -108,13 +108,15 @@ h2 {
 .header {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 15px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header-left {
-  padding: 30px 35px 15px 150px;
+  padding: 15px 30px 15px 150px;
   position: relative;
 }
 
@@ -132,12 +134,14 @@ h2 {
 
 .logo {
   position: absolute;
-  top: 11px;
+  top: 50%;
   left: 48px;
+  transform: translateY(-50%);
 }
 
 .header-right {
-  padding: 34px 30px 15px 15px;
+  padding: 15px 30px;
+  margin: 0 0 0 auto;
 }
 
 .header-button {
@@ -172,11 +176,12 @@ h2 {
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 22px 50px 31px;
+  padding: 22px 50px 11px;
   font-size: 0.6875rem;
   color: #1e1e1f;
   text-transform: uppercase;
   font-weight: 600;
+  text-align: center;
 }
 
 nav ul {
@@ -185,6 +190,10 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+nav li {
+  margin-bottom: 20px;
 }
 
 nav a {
@@ -201,13 +210,14 @@ nav a:hover {
   margin: 0 auto 19px;
   display: flex;
   align-items: stretch;
-  height: 484px;
+  min-height: 484px;
 }
 
 .promo-banner {
   width: 500px;
   margin-right: 16px;
   background: #9198a3 url(images/mans.jpg) 100% 0;
+  background-size: cover;
   font-size: 3.275rem;
   display: flex;
   padding: 30px 38px;
@@ -263,7 +273,10 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 145px 150px 0;
+  padding: 50px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-title {
@@ -340,7 +353,7 @@ nav a:hover {
 
 .tender {
   max-width: 1540px;
-  margin: 0 auto 19px;
+  margin: 0 auto;
   position: relative;
   background: url(images/desktop.jpg);
 }
@@ -398,8 +411,12 @@ nav a:hover {
   transform: translate(-50%, -50%);
 }
 
-.title-factors {
-  margin: 54px 0 34px;
+.factors {
+  padding-top: 54px;
+}
+
+.factors-title {
+  margin: 0 0 34px;
 }
 
 .title-trust {
@@ -593,7 +610,6 @@ nav a:hover {
 .team {
   background: url(images/greybanner2.jpg) repeat-x 50% 0;
   padding: 60px 0 0;
-  margin: 0 0 68px;
   overflow: hidden;
 }
 
@@ -693,6 +709,10 @@ nav a:hover {
   margin: 0 0 56px;
 }
 
+.services {
+  padding: 68px 0 0;
+}
+
 .services-list {
   font-weight: 800;
   text-transform: uppercase;
@@ -735,12 +755,8 @@ nav a:hover {
   min-height: 2.3em;
 }
 
-.projects {
-  margin: 0 0 60px;
-}
-
 .projects-title {
-  margin: -8px 0 28px;
+  margin: 0 0 28px;
 }
 
 .projects-nav {
@@ -834,7 +850,7 @@ nav a:hover {
 
 .projects-footer {
   max-width: 1200px;
-  margin: -48px auto 50px;
+  margin: -48px auto 0;
   background-color: #414854;
   color: #fff;
   font-size: 0.875rem;
@@ -872,7 +888,7 @@ nav a:hover {
 
 .brands {
   text-align: center;
-  padding: 0;
+  padding: 60px 0 0;
 }
 
 .brands-list {
@@ -1321,6 +1337,7 @@ nav a:hover {
 }
 
 .service {
+  background: #fff;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   max-width: 1140px;
 }
@@ -1352,7 +1369,6 @@ nav a:hover {
 }
 
 .service-content {
-  background-color: #fff;
   font-size: 0.875rem;
   display: flex;
 }
@@ -1375,11 +1391,11 @@ nav a:hover {
 }
 
 .service-text {
-  margin: 20px;
+  padding: 20px;
 }
 
 .service-image {
-  margin: 20px 0 20px 20px;
+  padding: 20px 0 20px 20px;
 }
 
 @media (max-width: 1499px) {
@@ -1396,6 +1412,7 @@ nav a:hover {
 @media (max-width: 1399px) {
   .promo-banner {
     width: 380px;
+    font-size: 2.25rem;
   }
 
   .slider-slide {
@@ -1405,6 +1422,18 @@ nav a:hover {
 }
 
 @media (max-width: 1199px) {
+  .promo {
+    min-height: 380px;
+  }
+
+  .slider-title {
+    font-size: 2.25rem;
+  }
+
+  .woman {
+    display: none;
+  }
+
   .technology-title {
     width: 560px;
     margin-left: 0;
@@ -1429,7 +1458,13 @@ nav a:hover {
     justify-content: space-around;
   }
 
-  .projects-footer {
+  .projects-footer,
+  .cert {
+    margin-top: 0;
+  }
+
+  .projects-footer,
+  .service-content {
     display: block;
   }
 
@@ -1450,8 +1485,10 @@ nav a:hover {
     padding-right: 30px;
   }
 
+  .tender-form,
   .company-form,
-  .team-form {
+  .team-form,
+  .service-form {
     padding-right: 30px;
   }
 
@@ -1462,14 +1499,17 @@ nav a:hover {
 
   .team-form::after,
   .consult-form::before,
-  .org-tender-form::before {
+  .org-tender-form::before,
+  .service-form::after {
     display: none;
   }
 
+  .tender-form .form-fields,
   .company-form .form-fields,
   .team-form .form-fields,
   .consult-form .form-fields,
-  .org-tender-form .form-fields {
+  .org-tender-form .form-fields,
+  .service-form .form-fields {
     width: 50%;
   }
 
@@ -1494,9 +1534,27 @@ nav a:hover {
   .contact-card {
     margin-left: 0;
   }
+
+  .service-image {
+    padding-right: 20px;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 991px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .promo-banner {
+    display: none;
+  }
+
   .technology-container {
     flex-wrap: wrap;
   }
@@ -1517,25 +1575,93 @@ nav a:hover {
     width: 50%;
   }
 
+  .callback {
+    max-width: 600px;
+  }
+
+  .tender-form,
   .company-form,
   .team-form,
   .projects-form,
   .consult-form,
-  .org-tender-form {
+  .org-tender-form,
+  .callback,
+  .service-form {
     flex-wrap: wrap;
   }
 
+  .tender-form .form-fields,
   .company-form .form-fields,
   .team-form .form-fields,
   .projects-form .form-fields,
   .consult-form .form-fields,
-  .org-tender-form .form-fields {
+  .org-tender-form .form-fields,
+  .callback .form-fields,
+  .service-form .form-fields {
     width: 100%;
     margin: 30px 0 0;
+  }
+
+  .form .form-title {
+    font-size: 2rem;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 767px) {
+  h2,
+  .technology-title,
+  .form .form-title,
+  .slider-title,
+  .problems-title h2,
+  .org-tender-title h2 {
+    font-size: 1.25rem;
+  }
+
+  .technology-list,
+  .slider-desc,
+  .org-tender-title p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    left: 30px;
+    width: 40px;
+    height: auto;
+  }
+
+  .company-name {
+    font-size: 0.8125rem;
+  }
+
+  .header-left {
+    padding-left: 80px;
+  }
+
+  .header-right {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-button {
+    display: none;
+  }
+
+  .promo {
+    min-height: 280px;
+  }
+
+  .slider-slide {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .slider-left,
+  .slider-right {
+    background-image: none;
+  }
+
   .carousel-slide {
     width: 100%;
   }
@@ -1557,6 +1683,10 @@ nav a:hover {
 
   .footer-company-name {
     font-size: 0.8125rem;
+  }
+
+  .modal-close {
+    right: 30px;
   }
 }
 
