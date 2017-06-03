@@ -2,13 +2,20 @@
 (function () {
   function showMore(event) {
     event.preventDefault();
-    const targets = document.querySelectorAll('.more-target.hidden');
-    if (targets.length <= 1) {
-      event.currentTarget.classList.add('hidden');
+    var trigger = event.currentTarget;
+    var selector = trigger.getAttribute('data-target');
+    var targets = document.querySelectorAll(selector);
+
+    var max = parseInt(trigger.getAttribute('data-count'), 10) || 1;
+    var len = targets.length;
+    if (len > max) {
+      len = max;
+    } else {
+      trigger.classList.add('hidden');
     }
 
-    if (targets[0]) {
-      targets[0].classList.remove('hidden');
+    for (var i = 0; i < len; i++) {
+      targets[i].classList.remove('hidden');
     }
   }
 
@@ -16,6 +23,37 @@
   for (var i = 0; i < triggers.length; i++) {
     var trigger = triggers[i];
     trigger.addEventListener('click', showMore);
+  }
+})();
+
+// carousels
+(function () {
+  function Carousel(el) {
+    this.currentIndex = 0;
+    this.el = el;
+    this.elSlides = el.getElementsByClassName('carousel-slides')[0];
+    this.slides = Array.prototype.slice.call(this.elSlides.getElementsByClassName('carousel-slide'));
+    this.elControls = el.getElementsByClassName('carousel-controls')[0];
+    this.controls = Array.prototype.slice.call(this.elControls.getElementsByClassName('carousel-control'));
+    this.elControls.addEventListener('click', this.setSlide.bind(this));
+  }
+
+  Carousel.prototype.setSlide = function (event) {
+    var index = this.controls.indexOf(event.target);
+    if (index === -1) return;
+    if (index !== this.currentIndex) {
+      this.controls[this.currentIndex].classList.remove('active');
+      this.controls[index].classList.add('active');
+      this.currentIndex = index;
+      for (var i = 0; i < this.slides.length; i++) {
+        this.slides[i].style.transform = 'translateX(-' + (index * 100) + '%)';
+      }
+    }
+  };
+
+  var carousels = document.getElementsByClassName('carousel');
+  for (var i = 0; i < carousels.length; i++) {
+    new Carousel(carousels[i]);
   }
 })();
 

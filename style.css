@@ -50,9 +50,7 @@ html {
   text-size-adjust: 100%;
   line-height: 1.15;
   background: #fff;
-  min-height: 10136px;
   color: #161616;
-  min-width: 1540px;
 }
 
 body {
@@ -102,7 +100,7 @@ h2 {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -209,7 +207,7 @@ nav a:hover {
 .promo-banner {
   width: 500px;
   margin-right: 16px;
-  background: #9198a3 url(images/mans.jpg);
+  background: #9198a3 url(images/mans.jpg) 100% 0;
   font-size: 3.275rem;
   display: flex;
   padding: 30px 38px;
@@ -229,6 +227,12 @@ nav a:hover {
   color: #fff;
   font-weight: 800;
   line-height: 1.4;
+}
+
+.slider-slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .slider-left,
@@ -269,16 +273,9 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-.tender {
-  max-width: 1540px;
-  margin: 0 auto 19px;
-  display: flex;
-  align-items: stretch;
-}
-
 .form {
   background: #890000 url(images/desktop.jpg);
-  padding: 28px 50px 28px 224px;
+  padding: 28px 30px;
   color: #fff;
   display: flex;
   flex-grow: 1;
@@ -341,10 +338,28 @@ nav a:hover {
   flex-shrink: 0;
 }
 
+.tender {
+  max-width: 1540px;
+  margin: 0 auto 19px;
+  position: relative;
+  background: url(images/desktop.jpg);
+}
+
+.tender-form {
+  background: none;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 384px;
+}
+
 .woman {
-  flex-shrink: 0;
-  margin-left: 14px;
-  background: #b8bec9 url(images/woman.jpg);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-left: 14px solid #fff;
+  background: #b8bec9 url(images/woman.jpg) no-repeat;
   font-size: 1.87rem;
   display: flex;
   padding: 20px 40px;
@@ -352,14 +367,15 @@ nav a:hover {
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 600;
-  width: 500px;
+  margin-left: 246px;
 }
 
 .features {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
-  margin: 0 0 72px;
+  margin: 0 0 22px;
   padding: 0;
   text-align: center;
   font-size: 0.875rem;
@@ -369,6 +385,7 @@ nav a:hover {
 .features li {
   width: 200px;
   padding: 100px 10px 0;
+  margin: 0 0 50px;
   position: relative;
 }
 
@@ -386,15 +403,17 @@ nav a:hover {
 }
 
 .title-trust {
-  margin: 94px 0 58px;
+  margin: 36px 0 58px;
 }
 
 .technology {
-  max-width: 1540px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.technology-container {
   display: flex;
   min-height: 597px;
-  margin-bottom: 41px;
 }
 
 .technology-title {
@@ -407,7 +426,7 @@ nav a:hover {
   color: #fff;
   text-transform: uppercase;
   background: #890000 url(images/mans2.jpg);
-  margin: 0;
+  margin: 0 0 0 -170px;
   text-align: left;
   display: flex;
   position: relative;
@@ -427,7 +446,7 @@ nav a:hover {
   font-weight: 800;
   text-transform: uppercase;
   list-style: none;
-  margin: 0;
+  margin: 0 30px;
   padding: 0 0 15px;
   display: flex;
   flex-direction: column;
@@ -435,8 +454,8 @@ nav a:hover {
 }
 
 .technology-list li {
-  padding: 6px 10px 6px 85px;
-  background: url(images/okey.png) no-repeat 26px 0;
+  padding: 6px 10px 6px 55px;
+  background: url(images/okey.png) no-repeat;
 }
 
 .problems {
@@ -473,9 +492,21 @@ nav a:hover {
 }
 
 .company {
+  position: relative;
   max-width: 1540px;
   margin: 0 auto 68px;
-  background: url(images/banner2.jpg) no-repeat 100% 100%;
+}
+
+.company::after {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  height: 717px;
+  margin-left: 252px;
+  background: #fff url(images/banner2.jpg) no-repeat 20px 0;
+  content: '';
+  pointer-events: none;
 }
 
 .company-title {
@@ -523,9 +554,18 @@ nav a:hover {
   content: '- ';
 }
 
+.company-form-container {
+  position: relative;
+  background: url(images/desktop.jpg);
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
 .company-form {
-  max-width: 1022px;
-  padding-left: 200px;
+  background: none;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 384px;
 }
 
 .company-form .form-title {
@@ -540,17 +580,21 @@ nav a:hover {
 .task-list {
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 42px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .task-list li {
   width: auto;
+  margin-bottom: 42px;
 }
 
 .team {
   background: url(images/greybanner2.jpg) repeat-x 50% 0;
   padding: 60px 0 0;
   margin: 0 0 68px;
+  overflow: hidden;
 }
 
 .team-title {
@@ -559,7 +603,14 @@ nav a:hover {
 
 .team-lead {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.team-lead img {
+  width: 100%;
+  max-width: 555px;
+  height: auto;
 }
 
 .team-name {
@@ -582,8 +633,19 @@ nav a:hover {
 
 .team-office {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 135px;
+  margin-bottom: 100px;
+}
+
+.team-office > div {
+  margin-bottom: 35px;
+}
+
+.team-office img {
+  width: 100%;
+  max-width: 370px;
+  height: auto;
 }
 
 .team-office-name {
@@ -597,11 +659,18 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
-.team-form {
-  padding-right: 567px;
+.team-support {
   position: relative;
-  margin: 0 auto;
+  background: url(images/desktop.jpg);
   max-width: 1540px;
+  margin: 0 auto;
+}
+
+.team-form {
+  background: none;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 416px;
 }
 
 .team-form .form-title {
@@ -612,7 +681,7 @@ nav a:hover {
 .team-form::after {
   background: url(images/consultants2.png) no-repeat;
   position: absolute;
-  right: 70px;
+  right: -80px;
   bottom: 0;
   width: 524px;
   height: 327px;
@@ -629,10 +698,10 @@ nav a:hover {
   text-transform: uppercase;
   display: flex;
   font-size: 0.875rem;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin: 0 -3px;
   padding: 0;
 }
 
@@ -640,6 +709,7 @@ nav a:hover {
   width: 374px;
   position: relative;
   padding: 315px 20px 20px;
+  margin: 0 3px;
   background: url(images/greyline.jpg) repeat-x 0 275px;
   margin-bottom: 50px;
 }
@@ -678,11 +748,18 @@ nav a:hover {
   font-weight: 800;
   color: #272727;
   max-width: 800px;
-  margin: 0 auto 24px;
+  margin: 0 auto;
+  padding: 0;
   text-transform: uppercase;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
+  text-align: center;
+}
+
+.projects-nav li {
+  margin: 0 0 24px;
 }
 
 .projects-nav a {
@@ -771,8 +848,8 @@ nav a:hover {
   margin: 0 0 30px;
 }
 
-.projects-footer-left {
-  padding: 15px 30px 15px;
+.projects-desc {
+  padding: 15px 30px;
   width: 540px;
   flex-shrink: 0;
   flex-grow: 0;
@@ -794,20 +871,27 @@ nav a:hover {
 }
 
 .brands {
+  text-align: center;
+  padding: 0;
+}
+
+.brands-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   justify-content: space-around;
   align-items: center;
-  margin: 0 0 85px;
+  margin: 0;
+  text-align: center;
+}
+
+.brands-list li {
+  margin: 0 30px 85px;
 }
 
 .brands-title {
-  margin: 0 0 58px;
-}
-
-.brands-container {
-  text-align: center;
+  margin: 0 30px 58px;
 }
 
 .brands-button {
@@ -815,17 +899,23 @@ nav a:hover {
   margin: 0 0 48px;
 }
 
-.form-consult {
+.consult {
+  position: relative;
+  background: url(images/desktop.jpg);
   max-width: 1540px;
   margin: 0 auto;
-  position: relative;
-  padding-left: 610px;
-  padding-right: 180px;
 }
 
-.form-consult::before {
+.consult-form {
+  background: none;
+  position: relative;
+  padding-left: 424px;
+  padding-right: 30px;
+}
+
+.consult-form::before {
   position: absolute;
-  left: 215px;
+  left: 40px;
   bottom: 0;
   width: 346px;
   height: 332px;
@@ -834,65 +924,92 @@ nav a:hover {
   content: '';
 }
 
-.form-consult .form-title {
+.consult-form .form-title {
   font-size: 2rem;
   padding-bottom: 6px;
 }
 
-.sert {
-  background: url(images/serts-bg.jpg) repeat-x 50% 0;
+.cert {
+  background: url(images/cert-bg.jpg) repeat-x 50% 0;
   padding: 101px 0 0;
   margin-top: -21px;
 }
 
-.sert-title {
+.cert-title {
   margin: 0 0 54px;
 }
 
-.karusel {
+.carousel {
   position: relative;
   color: #353535;
   font-weight: 600;
   font-size: 0.875rem;
 }
 
-.karusel ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.karusel li {
-  width: 258px;
-  list-style: none;
-}
-
-.karusel img {
-  display: block;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.karusel-dots {
-  text-align: center;
-  padding: 30px 0 35px;
-}
-
-.karusel-dot {
-  margin: 0 4px 0;
-  padding: 0;
-  border: 0;
-  background: #353535;
-  border-radius: 8px;
-  width: 8px;
-  height: 8px;
-  text-indent: 100%;
+.carousel-content {
+  position: relative;
+  margin: -16px;
+  padding: 16px 0;
   overflow: hidden;
 }
 
-.karusel-dot:hover {
+.carousel-slides {
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-slide {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  list-style: none;
+  white-space: normal;
+  padding: 0 16px;
+  transition: transform 200ms;
+}
+
+.carousel img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-controls {
+  text-align: center;
+  padding: 25px 0 30px;
+  font-size: 1px;
+}
+
+.carousel-control {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 16px;
+  height: 16px;
+  text-indent: 100%;
+  background: none;
+  overflow: hidden;
+}
+
+.carousel-control::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 4px;
+  left: 4px;
+  content: '';
+  background: #353535;
+  border-radius: 8px;
+}
+
+.carousel-control.active::before {
   background-color: #fe0000;
 }
 
-.karusel p {
+.carousel p {
   margin: 30px 0 0;
 }
 
@@ -905,7 +1022,7 @@ nav a:hover {
 }
 
 .org-tender-title {
-  padding: 75px 100px 52px 420px;
+  padding: 75px 100px 52px 424px;
   text-transform: uppercase;
 }
 
@@ -923,17 +1040,22 @@ nav a:hover {
   margin: 0;
 }
 
-.org-tender-form {
+.org-tender-container {
+  background: url(images/desktop.jpg);
   max-width: 1540px;
   margin: 0 auto;
+}
+
+.org-tender-form {
+  background: none;
   position: relative;
-  padding-left: 610px;
-  padding-right: 180px;
+  padding-left: 424px;
+  padding-right: 30px;
 }
 
 .org-tender-form::before {
   position: absolute;
-  left: 215px;
+  left: 68px;
   bottom: 0;
   width: 273px;
   height: 417px;
@@ -948,9 +1070,22 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
+.org-tender-form .form-fields {
+  width: 335px;
+}
+
 .contact {
-  background: url(images/navigation.jpg) 50% 0;
+  position: relative;
   padding: 47px 0 44px;
+}
+
+.contact-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(images/navigation.jpg) 50% 50%;
 }
 
 .contact-container {
@@ -958,19 +1093,53 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.contact-card {
-  background: #414854 url(images/contact-bg.jpg) no-repeat 0 100%;
-  padding: 30px 180px 100px 36px;
-  color: #fff;
+.contact-card-container {
+  width: 50%;
   margin-left: auto;
-  width: 930px;
+}
+
+.contact-card {
+  position: relative;
+  background: #414854 url(images/contact-bg.png) no-repeat 68px 50%;
+  padding: 34px 0 60px 36px;
+  color: #fff;
+  margin-left: -176px;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
 }
 
-.contact-card-list {
+.contact-card::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  bottom: 0;
+  content: '';
+  background: url(images/desktop.jpg);
+}
+
+.contact-content {
+  max-width: 714px;
+}
+
+.contact-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-list li {
+  flex: 1;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  min-width: 200px;
+}
+
+.contact-title {
+  text-align: left;
+  margin: 0 0 18px;
 }
 
 .contact-tel {
@@ -1025,23 +1194,13 @@ nav a:hover {
   background-position: -118px 0;
 }
 
-.contact-card-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact-card-list li {
-  flex: 1;
-}
-
-.contact-title {
-  text-align: left;
-}
-
 .footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-underline {
@@ -1051,19 +1210,24 @@ nav a:hover {
 }
 
 .footer-company {
-  padding: 32px 0 30px 100px;
+  padding: 12px 10px 10px 100px;
   position: relative;
 }
 
-.footer-company img {
+.footer-logo {
   position: absolute;
-  top: 21px;
+  top: 50%;
   left: 18px;
+  transform: translateY(-50%);
 }
 
 .footer-company-name {
   font-weight: 800;
   font-size: 1.5rem;
+}
+
+.footer-copy {
+  padding: 10px 10px 10px 0;
 }
 
 .footer-tagline {
@@ -1086,7 +1250,7 @@ nav a:hover {
 
 .footer-dev {
   position: relative;
-  padding: 30px 0 30px 52px;
+  padding: 10px 0 10px 52px;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.625rem;
@@ -1216,4 +1380,200 @@ nav a:hover {
 
 .service-image {
   margin: 20px 0 20px 20px;
+}
+
+@media (max-width: 1499px) {
+  .promo-banner,
+  .slider-title {
+    font-size: 3rem;
+  }
+
+  .woman {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1399px) {
+  .promo-banner {
+    width: 380px;
+  }
+
+  .slider-slide {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .technology-title {
+    width: 560px;
+    margin-left: 0;
+    padding-left: 30px;
+  }
+
+  .technology-title::before,
+  .company::after {
+    display: none;
+  }
+
+  .company-text {
+    padding-right: 30px;
+  }
+
+  .team-office {
+    margin-bottom: 30px;
+  }
+
+  .team-lead,
+  .team-office {
+    justify-content: space-around;
+  }
+
+  .projects-footer {
+    display: block;
+  }
+
+  .projects-desc {
+    width: auto;
+  }
+
+  .projects-form .form-fields {
+    width: 50%;
+  }
+
+  .carousel-slide {
+    width: 33.333%;
+  }
+
+  .org-tender-title {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .company-form,
+  .team-form {
+    padding-right: 30px;
+  }
+
+  .consult-form,
+  .org-tender-form {
+    padding-left: 30px;
+  }
+
+  .team-form::after,
+  .consult-form::before,
+  .org-tender-form::before {
+    display: none;
+  }
+
+  .company-form .form-fields,
+  .team-form .form-fields,
+  .consult-form .form-fields,
+  .org-tender-form .form-fields {
+    width: 50%;
+  }
+
+  .contact {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .contact-map {
+    position: relative;
+    height: 360px;
+  }
+
+  .contact-content {
+    max-width: none;
+  }
+
+  .contact-card-container {
+    width: auto;
+  }
+
+  .contact-card {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .technology-container {
+    flex-wrap: wrap;
+  }
+
+  .technology-title {
+    width: 100%;
+  }
+
+  .technology-list {
+    padding: 30px 0 0;
+  }
+
+  .projects-nav {
+    display: block;
+  }
+
+  .carousel-slide {
+    width: 50%;
+  }
+
+  .company-form,
+  .team-form,
+  .projects-form,
+  .consult-form,
+  .org-tender-form {
+    flex-wrap: wrap;
+  }
+
+  .company-form .form-fields,
+  .team-form .form-fields,
+  .projects-form .form-fields,
+  .consult-form .form-fields,
+  .org-tender-form .form-fields {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-slide {
+    width: 100%;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-logo {
+    left: 0;
+    width: 40px;
+    height: auto;
+  }
+
+  .footer-company {
+    padding-left: 50px;
+  }
+
+  .footer-company-name {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-control:nth-last-child(-n+3) {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-control:nth-last-child(-n+2) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-control:nth-last-child(-n+1) {
+    display: none;
+  }
 }
