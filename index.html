@@ -35,16 +35,28 @@
     <div class="promo">
       <div class="promo-banner">Разработка проекта дома "С нуля"</div>
       <div class="slider">
-        <ul class="slider-slides">
-          <li class="slider-slide">
-            <div>
-              <div class="slider-title">Профессиональное<br/> Проектирование</div>
-              <div class="slider-desc">Комплексное проектирование<br/> от концепции до ввода в эксплуатацию</div>
-            </div>
-          </li>
-        </ul>
-        <button class="slider-left" type="button">Влево</button>
-        <button class="slider-right" type="button">Вправо</button>
+        <div class="slider-content">
+          <ul class="slider-slides">
+            <li class="slider-slide active">
+              <div>
+                <div class="slider-title">Профессиональное<br/> Проектирование</div>
+                <div class="slider-desc">Комплексное проектирование<br/> от концепции до ввода в эксплуатацию</div>
+              </div>
+            </li><li class="slider-slide">
+              <div>
+                <div class="slider-title">Проектирование<br> Профессиональное</div>
+                <div class="slider-desc">От концепции до ввода в эксплуатацию<br/> комплексное проектирование</div>
+              </div>
+            </li><li class="slider-slide">
+              <div>
+                <div class="slider-title">Комплексное<br/> Проектирование</div>
+                <div class="slider-desc">Профессиональное проектирование<br/> от концепции до ввода в эксплуатацию</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="slider-prev" type="button">Влево</button>
+        <button class="slider-next" type="button">Вправо</button>
       </div>
     </div>
     <div class="tender">
@@ -416,7 +428,7 @@
       </div>
     </div>
     <div id="contacts" class="contact">
-      <div class="contact-map"></div>
+      <div id="map" class="contact-map"></div>
       <div class="contact-container">
         <div class="contact-card-container">
           <div class="contact-card">
@@ -530,5 +542,6 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfN01uCf1u8fZLfjVviW-6rRjtHJC_CBE&callback=initMap"></script>
   </body>
 </html>

@@ -221,7 +221,8 @@ nav a:hover {
   font-size: 3.275rem;
   display: flex;
   padding: 30px 38px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 3px 46px rgba(0, 0, 0, 0.33);
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 800;
@@ -231,7 +232,6 @@ nav a:hover {
 .slider {
   flex-grow: 1;
   position: relative;
-  background: #890000 url(images/desktop.jpg);
   text-transform: uppercase;
   font-size: 1.3925rem;
   color: #fff;
@@ -245,8 +245,40 @@ nav a:hover {
   padding: 0;
 }
 
-.slider-left,
-.slider-right {
+.slider-slide {
+  background: #890000 url(images/desktop.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.slider-slide.prev {
+  z-index: 1;
+  opacity: 1;
+}
+
+.slider-slide.active {
+  z-index: 2;
+  opacity: 1;
+}
+
+.slider-title {
+  font-size: 3.54rem;
+  color: #ffe400;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.slider-prev,
+.slider-next {
   position: absolute;
   top: 0;
   left: 0;
@@ -259,31 +291,13 @@ nav a:hover {
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
+  z-index: 3;
 }
 
-.slider-right {
+.slider-next {
   background-image: url(images/slider-right.png);
   right: 0;
   left: auto;
-}
-
-.slider-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 50px 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider-title {
-  font-size: 3.54rem;
-  color: #ffe400;
-  line-height: 1.15;
-  margin-bottom: 20px;
 }
 
 .form {
@@ -376,7 +390,8 @@ nav a:hover {
   font-size: 1.87rem;
   display: flex;
   padding: 20px 40px;
-  color: rgba(255, 255, 255, 0.33);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 3px 46px rgba(0, 0, 0, 0.33);
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 600;
@@ -1101,7 +1116,6 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(images/navigation.jpg) 50% 50%;
 }
 
 .contact-container {
@@ -1287,6 +1301,7 @@ nav a:hover {
   height: 100%;
   overflow-y: auto;
   background: rgba(255, 255, 255, 0.76);
+  z-index: 9;
 }
 
 .modal-container {
@@ -1657,8 +1672,8 @@ nav a:hover {
     padding-right: 30px;
   }
 
-  .slider-left,
-  .slider-right {
+  .slider-prev,
+  .slider-next {
     background-image: none;
   }
 

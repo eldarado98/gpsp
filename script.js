@@ -1,3 +1,58 @@
+// slider
+(function () {
+  function Slider(el) {
+    this.currentIndex = 0;
+    this.prevIndex = 0;
+    this.timeout = null;
+    this.el = el;
+    this.elSlides = el.getElementsByClassName('slider-slides')[0];
+    this.slides = Array.prototype.slice.call(this.elSlides.getElementsByClassName('slider-slide'));
+    this.elPrev = el.getElementsByClassName('slider-prev')[0];
+    this.elNext = el.getElementsByClassName('slider-next')[0];
+    this.prev = this.prev.bind(this);
+    this.next = this.next.bind(this);
+    this.clearPrev = this.clearPrev.bind(this);
+    this.elPrev.addEventListener('click', this.prev);
+    this.elNext.addEventListener('click', this.next);
+  }
+
+  Slider.prototype.prev = function () {
+    this.setSlide(this.currentIndex - 1);
+  };
+
+  Slider.prototype.next = function () {
+    this.setSlide(this.currentIndex + 1);
+  };
+
+  Slider.prototype.clearPrev = function () {
+    this.slides[this.prevIndex].classList.remove('prev');
+  };
+
+  Slider.prototype.setSlide = function (index) {
+    window.clearTimeout(this.timeout);
+    if (index >= this.slides.length) {
+      index = 0;
+    }
+    if (index < 0) {
+      index = this.slides.length - 1;
+    }
+    if (index !== this.currentIndex) {
+      this.slides[this.prevIndex].classList.remove('prev');
+      this.slides[this.currentIndex].classList.add('prev');
+      this.slides[this.currentIndex].classList.remove('active');
+      this.prevIndex = this.currentIndex;
+      this.currentIndex = index;
+      this.slides[this.currentIndex].classList.add('active');
+      this.timeout = window.setTimeout(this.clearPrev, 300);
+    }
+  };
+
+  var sliders = document.getElementsByClassName('slider');
+  for (var i = 0; i < sliders.length; i++) {
+    new Slider(sliders[i]);
+  }
+})();
+
 // show more
 (function () {
   function showMore(event) {
@@ -35,7 +90,8 @@
     this.slides = Array.prototype.slice.call(this.elSlides.getElementsByClassName('carousel-slide'));
     this.elControls = el.getElementsByClassName('carousel-controls')[0];
     this.controls = Array.prototype.slice.call(this.elControls.getElementsByClassName('carousel-control'));
-    this.elControls.addEventListener('click', this.setSlide.bind(this));
+    this.setSlide = this.setSlide.bind(this);
+    this.elControls.addEventListener('click', this.setSlide);
   }
 
   Carousel.prototype.setSlide = function (event) {
@@ -108,3 +164,19 @@
     modal.addEventListener('keydown', keyDown);
   }
 })();
+
+// Map
+function initMap() {
+  var center = { lat: 52.8973962, lng: 24.8398293 };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    // https://developers.google.com/maps/documentation/javascript/reference?csw=1#MapOptions
+    zoom: 12,
+    center: center,
+    scrollwheel: false
+  });
+  var marker = new google.maps.Marker({
+    // https://developers.google.com/maps/documentation/javascript/reference?csw=1#MarkerOptions
+    position: center,
+    map: map
+  });
+}
