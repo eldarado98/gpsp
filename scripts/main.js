@@ -121,7 +121,7 @@
     if (target) {
       var modal = document.getElementById(target);
       if (modal) {
-        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
         modal.focus();
       }
     }
@@ -135,7 +135,7 @@
       target.classList.contains('modal-content') ||
       target.classList.contains('modal-close')) {
       event.preventDefault();
-      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
       var trigger = document.querySelector('.modal-trigger[data-target=' + modal.id + ']');
       if (trigger) {
         trigger.focus();
@@ -172,6 +172,14 @@ function initMap() {
     // https://developers.google.com/maps/documentation/javascript/reference?csw=1#MapOptions
     zoom: 12,
     center: center,
+    mapTypeControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    scaleControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
     scrollwheel: false
   });
   var marker = new google.maps.Marker({
@@ -179,4 +187,83 @@ function initMap() {
     position: center,
     map: map
   });
+
+  if (window.innerWidth >= 1200) {
+    map.panBy(400, 0);
+  }
 }
+
+// gallery
+(function () {
+  function Gallery(el) {
+    this.el = el;
+    this.elSlides = el.getElementsByClassName('gallery-slides')[0];
+    this.images = Array.prototype.slice.call(this.elSlides.getElementsByClassName('gallery-image'));
+    this.elPrev = el.getElementsByClassName('gallery-prev')[0];
+    this.elNext = el.getElementsByClassName('gallery-next')[0];
+    this.prev = this.prev.bind(this);
+    this.next = this.next.bind(this);
+    this.open = this.open.bind(this);
+    this.getBounds = this.getBounds.bind(this);
+    this.elPrev.addEventListener('click', this.prev);
+    this.elNext.addEventListener('click', this.next);
+    this.elSlides.addEventListener('click', this.open);
+    document.getElementsByClassName('projects-prev')[0].addEventListener('click', this.prev);
+    document.getElementsByClassName('projects-next')[0].addEventListener('click', this.next);
+  }
+
+  Gallery.prototype.prev = function () {
+    var image = this.images[this.images.length - 1];
+    this.images.pop();
+    this.images.unshift(image);
+    var li = image.parentNode;
+    li.parentNode.insertBefore(li, li.parentNode.firstChild);
+  };
+
+  Gallery.prototype.next = function () {
+    var image = this.images[0];
+    this.images.shift();
+    this.images.push(image);
+    var li = image.parentNode;
+    li.parentNode.appendChild(li);
+  };
+
+  Gallery.prototype.open = function (event) {
+    var index = this.images.indexOf(event.target);
+    if (index === -1) return;
+
+    var gallery = new PhotoSwipe(
+      document.getElementsByClassName('pswp')[0],
+      PhotoSwipeUI_Default,
+      this.images.map(function (image) {
+        return {
+          msrc: image.src,
+          src: image.src,
+          w: image.width,
+          h: image.height
+        };
+      }),
+      {
+        // http://photoswipe.com/documentation/options.html
+        index: index,
+        getThumbBoundsFn: this.getBounds,
+        showHideOpacity: true,
+        history: false,
+        captionEl: false,
+        fullscreenEl: false,
+        shareEl: false
+      }
+    );
+    gallery.init();
+  };
+
+  Gallery.prototype.getBounds = function (index) {
+    var rect = this.images[index].getBoundingClientRect();
+    return { x: rect.left, y: rect.top + window.pageYOffset, w: rect.width};
+  };
+
+  var gallery = document.getElementsByClassName('gallery');
+  for (var i = 0; i < gallery.length; i++) {
+    new Gallery(gallery[i]);
+  }
+})();

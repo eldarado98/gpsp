@@ -4,8 +4,8 @@
   src:
     local('Circe Light'),
     local('Circe-Light'),
-    url('fonts/Circe-Light.woff2') format('woff2'),
-    url('fonts/Circe-Light.woff') format('woff');
+    url('../fonts/Circe-Light.woff2') format('woff2'),
+    url('../fonts/Circe-Light.woff') format('woff');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   src:
     local('Circe Regular'),
     local('Circe-Regular'),
-    url('fonts/Circe-Regular.woff2') format('woff2'),
-    url('fonts/Circe-Regular.woff') format('woff');
+    url('../fonts/Circe-Regular.woff2') format('woff2'),
+    url('../fonts/Circe-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   src:
     local('Circe Bold'),
     local('Circe-Bold'),
-    url('fonts/Circe-Bold.woff2') format('woff2'),
-    url('fonts/Circe-Bold.woff') format('woff');
+    url('../fonts/Circe-Bold.woff2') format('woff2'),
+    url('../fonts/Circe-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -34,20 +34,21 @@
   src:
     local('Circe ExtraBold'),
     local('Circe-ExtraBold'),
-    url('fonts/Circe-ExtraBold.woff2') format('woff2'),
-    url('fonts/Circe-ExtraBold.woff') format('woff');
+    url('../fonts/Circe-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Circe-ExtraBold.woff') format('woff');
 }
 
 *,
 ::before,
 ::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 html {
   font-family: Circe, sans-serif;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  text-size-adjust: 100%;
   line-height: 1.15;
   background: #fff;
   color: #161616;
@@ -55,12 +56,11 @@ html {
 
 body {
   margin: 0;
-  background: url(images/header-bg.jpg) repeat-x 50% 0;
+  background: url(../images/header-bg.jpg) repeat-x 50% 0;
 }
 
 a {
   background-color: transparent;
-  text-decoration-skip: objects;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -109,9 +109,16 @@ h2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -136,6 +143,7 @@ h2 {
   position: absolute;
   top: 50%;
   left: 48px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -151,19 +159,21 @@ h2 {
   text-transform: uppercase;
   font-size: 0.75rem;
   color: #fefefe;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#df0803), to(#be0804));
   background-image: linear-gradient(#df0803, #be0804);
   border: 0;
   font-weight: 600;
 }
 
 .header-button:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#be0804), to(#df0803));
   background-image: linear-gradient(#be0804, #df0803);
 }
 
 .phone {
   color: #1f2025;
   font-size: 1.75rem;
-  background: url(images/phone.png) no-repeat 0 50%;
+  background: url(../images/phone.png) no-repeat 0 50%;
   padding-left: 30px;
   vertical-align: middle;
 }
@@ -188,7 +198,11 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -208,7 +222,11 @@ nav a:hover {
 .promo {
   max-width: 1540px;
   margin: 0 auto 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   min-height: 484px;
 }
@@ -216,20 +234,27 @@ nav a:hover {
 .promo-banner {
   width: 500px;
   margin-right: 16px;
-  background: #9198a3 url(images/mans.jpg) 100% 0;
+  background: #9198a3 url(../images/mans.jpg) 100% 0;
   background-size: cover;
   font-size: 3.275rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 30px 38px;
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 3px 46px rgba(0, 0, 0, 0.33);
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 800;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .slider {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   position: relative;
   text-transform: uppercase;
@@ -246,17 +271,24 @@ nav a:hover {
 }
 
 .slider-slide {
-  background: #890000 url(images/desktop.jpg);
+  background: #890000 url(../images/desktop.jpg);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 50px 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   opacity: 0;
+  -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
 }
 
@@ -286,7 +318,7 @@ nav a:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url(images/slider-left.png) no-repeat 50% 50%;
+  background: url(../images/slider-left.png) no-repeat 50% 50%;
   border: 0;
   white-space: nowrap;
   text-indent: 100%;
@@ -295,20 +327,26 @@ nav a:hover {
 }
 
 .slider-next {
-  background-image: url(images/slider-right.png);
+  background-image: url(../images/slider-right.png);
   right: 0;
   left: auto;
 }
 
 .form {
-  background: #890000 url(images/desktop.jpg);
+  background: #890000 url(../images/desktop.jpg);
   padding: 28px 30px;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .form-text {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -353,7 +391,7 @@ nav a:hover {
 
 .form-shield {
   color: #ffe400;
-  background: url(images/shield.png) no-repeat 0 50%;
+  background: url(../images/shield.png) no-repeat 0 50%;
   padding: 6px 0 6px 28px;
   font-size: 0.875rem;
   margin: 0;
@@ -362,6 +400,7 @@ nav a:hover {
 .form-fields {
   margin-left: 30px;
   width: 320px;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
@@ -369,7 +408,7 @@ nav a:hover {
   max-width: 1540px;
   margin: 0 auto;
   position: relative;
-  background: url(images/desktop.jpg);
+  background: url(../images/desktop.jpg);
 }
 
 .tender-form {
@@ -386,12 +425,16 @@ nav a:hover {
   right: 0;
   height: 100%;
   border-left: 14px solid #fff;
-  background: #b8bec9 url(images/woman.jpg) no-repeat;
+  background: #b8bec9 url(../images/woman.jpg) no-repeat;
   font-size: 1.87rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 20px 40px;
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 3px 46px rgba(0, 0, 0, 0.33);
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   text-transform: uppercase;
   font-weight: 600;
@@ -399,8 +442,12 @@ nav a:hover {
 }
 
 .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   list-style: none;
   margin: 0 0 22px;
@@ -423,6 +470,7 @@ nav a:hover {
   position: absolute;
   top: 50px;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -444,22 +492,29 @@ nav a:hover {
 }
 
 .technology-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 597px;
 }
 
 .technology-title {
   width: 900px;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 70px 50px 50px 215px;
   font-size: 2.0625rem;
   font-weight: 800;
   color: #fff;
   text-transform: uppercase;
-  background: #890000 url(images/mans2.jpg);
+  background: #890000 url(../images/mans2.jpg);
   margin: 0 0 0 -170px;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
@@ -470,7 +525,7 @@ nav a:hover {
   left: 55px;
   width: 57px;
   height: 565px;
-  background: url(images/pen.png) no-repeat;
+  background: url(../images/pen.png) no-repeat;
   content: '';
 }
 
@@ -480,14 +535,20 @@ nav a:hover {
   list-style: none;
   margin: 0 30px;
   padding: 0 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 .technology-list li {
   padding: 6px 10px 6px 55px;
-  background: url(images/okey.png) no-repeat;
+  background: url(../images/okey.png) no-repeat;
 }
 
 .problems {
@@ -497,7 +558,7 @@ nav a:hover {
 
 .problems-title {
   max-width: 1540px;
-  background: #5d636c url(images/banner1.jpg);
+  background: #5d636c url(../images/banner1.jpg);
   margin: 0 0 74px;
 }
 
@@ -536,7 +597,7 @@ nav a:hover {
   bottom: 0;
   height: 717px;
   margin-left: 252px;
-  background: #fff url(images/banner2.jpg) no-repeat 20px 0;
+  background: #fff url(../images/banner2.jpg) no-repeat 20px 0;
   content: '';
   pointer-events: none;
 }
@@ -588,7 +649,7 @@ nav a:hover {
 
 .company-form-container {
   position: relative;
-  background: url(images/desktop.jpg);
+  background: url(../images/desktop.jpg);
   max-width: 1540px;
   margin: 0 auto;
 }
@@ -612,6 +673,7 @@ nav a:hover {
 .task-list {
   font-weight: 600;
   text-transform: uppercase;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -623,7 +685,7 @@ nav a:hover {
 }
 
 .team {
-  background: url(images/greybanner2.jpg) repeat-x 50% 0;
+  background: url(../images/greybanner2.jpg) repeat-x 50% 0;
   padding: 60px 0 0;
   overflow: hidden;
 }
@@ -633,8 +695,13 @@ nav a:hover {
 }
 
 .team-lead {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -663,8 +730,13 @@ nav a:hover {
 }
 
 .team-office {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 100px;
 }
@@ -692,7 +764,7 @@ nav a:hover {
 
 .team-support {
   position: relative;
-  background: url(images/desktop.jpg);
+  background: url(../images/desktop.jpg);
   max-width: 1540px;
   margin: 0 auto;
 }
@@ -710,7 +782,7 @@ nav a:hover {
 }
 
 .team-form::after {
-  background: url(images/consultants2.png) no-repeat;
+  background: url(../images/consultants2.png) no-repeat;
   position: absolute;
   right: -80px;
   bottom: 0;
@@ -731,9 +803,13 @@ nav a:hover {
 .services-list {
   font-weight: 800;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 0.875rem;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
   margin: 0 -3px;
@@ -745,18 +821,19 @@ nav a:hover {
   position: relative;
   padding: 315px 20px 20px;
   margin: 0 3px;
-  background: url(images/greyline.jpg) repeat-x 0 275px;
+  background: url(../images/greyline.jpg) repeat-x 0 275px;
   margin-bottom: 50px;
 }
 
 .services-list li:hover {
-  background-image: url(images/redline.jpg);
+  background-image: url(../images/redline.jpg);
 }
 
 .services-list img {
   position: absolute;
   top: 130px;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -782,9 +859,14 @@ nav a:hover {
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   text-align: center;
 }
@@ -805,44 +887,59 @@ nav a:hover {
 
 .projects-links {
   font-size: 0.75rem;
-  font-weight: 600;
-  color: #191919;
-  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 0 13px;
 }
 
-.projects-links a:hover {
+.projects-link {
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-weight: 600;
+  border: 0;
+  text-transform: uppercase;
+  color: #191919;
+}
+
+.projects-link:hover {
   color: #fe0000;
 }
 
-.slider2 {
+.gallery {
   height: 586px;
   overflow: hidden;
   position: relative;
 }
 
-.slider2-container {
+.gallery-container {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
-.slider2-list {
+.gallery-slides {
   list-style: none;
   margin: 0 0 0 -950px;
   padding: 0;
   white-space: nowrap;
 }
 
-.slider2-slide {
+.gallery-slide {
   display: inline-block;
   vertical-align: top;
 }
 
-.slider2-left,
-.slider2-right {
+.gallery-image {
+  cursor: pointer;
+}
+
+.gallery-prev,
+.gallery-next {
   position: absolute;
   top: 0;
   left: 0;
@@ -850,15 +947,15 @@ nav a:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: url(images/house-left.png) no-repeat 50% 50%;
+  background: url(../images/gallery-prev.png) no-repeat 50% 50%;
   border: 0;
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
 }
 
-.slider2-right {
-  background-image: url(images/house-right.png);
+.gallery-next {
+  background-image: url(../images/gallery-next.png);
   right: 0;
   left: auto;
 }
@@ -870,6 +967,8 @@ nav a:hover {
   color: #fff;
   font-size: 0.875rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -882,12 +981,17 @@ nav a:hover {
 .projects-desc {
   padding: 15px 30px;
   width: 540px;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
 }
 
 .projects-form {
   padding-left: 24px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -907,11 +1011,17 @@ nav a:hover {
 }
 
 .brands-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0;
   text-align: center;
@@ -932,7 +1042,7 @@ nav a:hover {
 
 .consult {
   position: relative;
-  background: url(images/desktop.jpg);
+  background: url(../images/desktop.jpg);
   max-width: 1540px;
   margin: 0 auto;
 }
@@ -950,7 +1060,7 @@ nav a:hover {
   bottom: 0;
   width: 346px;
   height: 332px;
-  background: url(images/consultants.png) no-repeat;
+  background: url(../images/consultants.png) no-repeat;
   pointer-events: none;
   content: '';
 }
@@ -961,7 +1071,7 @@ nav a:hover {
 }
 
 .cert {
-  background: url(images/cert-bg.jpg) repeat-x 50% 0;
+  background: url(../images/cert-bg.jpg) repeat-x 50% 0;
   padding: 101px 0 0;
   margin-top: -21px;
 }
@@ -998,12 +1108,16 @@ nav a:hover {
   list-style: none;
   white-space: normal;
   padding: 0 16px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
   transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 .carousel img {
   display: block;
   margin: 0 auto;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -1049,7 +1163,7 @@ nav a:hover {
 }
 
 .org-tender {
-  background: url(images/banner9.jpg) repeat-x 50% 0;
+  background: url(../images/banner9.jpg) repeat-x 50% 0;
 }
 
 .org-tender-title {
@@ -1072,7 +1186,7 @@ nav a:hover {
 }
 
 .org-tender-container {
-  background: url(images/desktop.jpg);
+  background: url(../images/desktop.jpg);
   max-width: 1540px;
   margin: 0 auto;
 }
@@ -1090,7 +1204,7 @@ nav a:hover {
   bottom: 0;
   width: 273px;
   height: 417px;
-  background: url(images/guy.png) no-repeat;
+  background: url(../images/guy.png) no-repeat;
   pointer-events: none;
   content: '';
 }
@@ -1130,10 +1244,11 @@ nav a:hover {
 
 .contact-card {
   position: relative;
-  background: #414854 url(images/contact-bg.png) no-repeat 68px 50%;
+  background: #414854 url(../images/contact-bg.png) no-repeat 68px 50%;
   padding: 34px 0 60px 36px;
   color: #fff;
   margin-left: -176px;
+  -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
 }
 
@@ -1144,7 +1259,7 @@ nav a:hover {
   height: 16px;
   bottom: 0;
   content: '';
-  background: url(images/desktop.jpg);
+  background: url(../images/desktop.jpg);
 }
 
 .contact-content {
@@ -1155,12 +1270,19 @@ nav a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .contact-list li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   margin-right: 30px;
   margin-bottom: 40px;
@@ -1208,7 +1330,7 @@ nav a:hover {
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
-  background: url(images/socials.png) no-repeat;
+  background: url(../images/socials.png) no-repeat;
   margin-right: 10px;
 }
 
@@ -1227,9 +1349,16 @@ nav a:hover {
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -1248,6 +1377,7 @@ nav a:hover {
   position: absolute;
   top: 50%;
   left: 18px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1304,9 +1434,19 @@ nav a:hover {
   z-index: 9;
 }
 
+.modal[aria-hidden='true'] {
+  display: none;
+}
+
 .modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 100%;
 }
@@ -1327,6 +1467,7 @@ nav a:hover {
   color: #bd0000;
   font-size: 3rem;
   font-weight: 200;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   border: 0;
   margin: 0;
@@ -1353,6 +1494,7 @@ nav a:hover {
 
 .service {
   background: #fff;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   max-width: 1140px;
 }
@@ -1367,7 +1509,7 @@ nav a:hover {
   position: absolute;
   right: 70px;
   bottom: 0;
-  background: url(images/devushka-man.png) no-repeat;
+  background: url(../images/devushka-man.png) no-repeat;
   pointer-events: none;
   width: 309px;
   height: 294px;
@@ -1385,6 +1527,8 @@ nav a:hover {
 
 .service-content {
   font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1470,6 +1614,7 @@ nav a:hover {
 
   .team-lead,
   .team-office {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
@@ -1563,6 +1708,9 @@ nav a:hover {
 
 @media (max-width: 991px) {
   nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1571,6 +1719,7 @@ nav a:hover {
   }
 
   .technology-container {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -1602,6 +1751,7 @@ nav a:hover {
   .org-tender-form,
   .callback,
   .service-form {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 

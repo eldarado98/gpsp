@@ -6,7 +6,9 @@
     <title>ЗАО "ГОРПРОМСТРОЙПРОЕКТ"</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/photoswipe.css">
+    <link rel="stylesheet" href="styles/default-skin/default-skin.css">
   </head>
   <body id="home">
     <header class="header">
@@ -255,24 +257,22 @@
           <li><a href="#">Дорогилогистические центры</a></li>
         </ul>
         <div class="projects-links">
-          <a href="#">Предыдущий проект</a>
-          <a href="#">Следующий проект</a>
+          <button class="projects-link projects-prev" type="button">Предыдущий проект</button>
+          <button class="projects-link projects-next" type="button">Следующий проект</button>
         </div>
       </div>
-      <div class="slider2">
-        <div class="slider2-container">
-          <ul class="slider2-list">
-            <li class="slider2-slide">
-              <img src="images/house2.jpg" alt="" width="950" height="586"/>
-            </li><li class="slider2-slide">
-              <img src="images/house3.jpg" alt="" width="950" height="586"/>
-            </li><li class="slider2-slide">
-              <img src="images/house2.jpg" alt="" width="950" height="586"/>
-            </li>
-          </ul>
+      <div class="gallery">
+        <div class="gallery-container">
+          <ul class="gallery-slides"><li class="gallery-slide">
+            <img class="gallery-image" src="images/house2.jpg" alt="" width="950" height="586"/>
+          </li><li class="gallery-slide">
+            <img class="gallery-image" src="images/house3.jpg" alt="" width="950" height="586"/>
+          </li><li class="gallery-slide">
+            <img class="gallery-image" src="images/house2.jpg" alt="" width="950" height="586"/>
+          </li></ul>
         </div>
-        <button class="slider2-left" type="button">Влево</button>
-        <button class="slider2-right" type="button">Вправо</button>
+        <button class="gallery-prev" type="button">Влево</button>
+        <button class="gallery-next" type="button">Вправо</button>
       </div>
       <div class="projects-footer">
         <div class="projects-desc">
@@ -490,7 +490,7 @@
       </div>
     </div>
     <div class="footer-underline header-button"></div>
-    <div id="call" class="modal hidden" tabindex="-1">
+    <div id="call" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-container">
         <div class="modal-content">
           <form class="form callback">
@@ -509,7 +509,7 @@
         </div>
       </div>
     </div>
-    <div id="service" class="modal hidden" tabindex="-1">
+    <div id="service" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-container">
         <div class="modal-content">
           <div class="service">
@@ -541,7 +541,43 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Закрыть (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Поделиться"></button>
+            <button class="pswp__button pswp__button--fs" title="Во весь экран"></button>
+            <button class="pswp__button pswp__button--zoom" title="Увеличить/Уменьшить"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Назад (стрелка влево)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Вперед (стрелка вправо)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/photoswipe.min.js"></script>
+    <script src="scripts/photoswipe-ui-default.min.js"></script>
+    <script src="scripts/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfN01uCf1u8fZLfjVviW-6rRjtHJC_CBE&callback=initMap"></script>
   </body>
 </html>
