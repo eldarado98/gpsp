@@ -207,7 +207,8 @@ function initMap() {
   function Gallery(el) {
     this.el = el;
     this.elSlides = el.getElementsByClassName('gallery-slides')[0];
-    this.images = Array.prototype.slice.call(this.elSlides.getElementsByClassName('gallery-image'));
+    this.slides = Array.prototype.slice.call(this.elSlides.getElementsByClassName('gallery-slide'));
+    this.images = [];
     this.elPrev = el.getElementsByClassName('gallery-prev')[0];
     this.elNext = el.getElementsByClassName('gallery-next')[0];
     this.prev = this.prev.bind(this);
@@ -222,22 +223,23 @@ function initMap() {
   }
 
   Gallery.prototype.prev = function () {
-    var image = this.images[this.images.length - 1];
-    this.images.pop();
-    this.images.unshift(image);
-    var li = image.parentNode;
-    li.parentNode.insertBefore(li, li.parentNode.firstChild);
+    var slide = this.slides[this.slides.length - 1];
+    this.slides.pop();
+    this.slides.unshift(slide);
+    slide.parentNode.insertBefore(slide, slide.parentNode.firstChild);
   };
 
   Gallery.prototype.next = function () {
-    var image = this.images[0];
-    this.images.shift();
-    this.images.push(image);
-    var li = image.parentNode;
-    li.parentNode.appendChild(li);
+    var slide = this.slides[0];
+    this.slides.shift();
+    this.slides.push(slide);
+    slide.parentNode.appendChild(slide);
   };
 
   Gallery.prototype.open = function (event) {
+    if (event.target.tagName !== 'IMG') return;
+    if (event.target.parentNode.previousElementSibling) return;
+    this.images = Array.prototype.slice.call(event.target.parentNode.children);
     var index = this.images.indexOf(event.target);
     if (index === -1) return;
 
@@ -248,8 +250,8 @@ function initMap() {
         return {
           msrc: image.src,
           src: image.src,
-          w: image.width,
-          h: image.height
+          w: image.getAttribute('width'),
+          h: image.getAttribute('height')
         };
       }),
       {
