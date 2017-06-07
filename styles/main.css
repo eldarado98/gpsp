@@ -183,10 +183,27 @@ h2 {
   vertical-align: baseline;
 }
 
+.nav-trigger {
+  display: none;
+  position: absolute;
+  left: 27px;
+  top: -45px;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: url(../images/burger.gif) no-repeat 50% 50%;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
 nav {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 22px 50px 11px;
+  padding: 0;
   font-size: 0.6875rem;
   color: #1e1e1f;
   text-transform: uppercase;
@@ -197,7 +214,7 @@ nav {
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 22px 50px 11px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,6 +230,7 @@ nav li {
 nav a {
   padding: 4px 10px;
   border-bottom: 2px solid transparent;
+  transition: border-color 300ms ease;
 }
 
 nav a:hover {
@@ -1707,6 +1725,18 @@ nav a:hover {
 }
 
 @media (max-width: 991px) {
+  .header-left {
+    width: 100%;
+  }
+
+  .nav-trigger {
+    display: block;
+  }
+
+  .nav-hidden + ul {
+    display: none;
+  }
+
   nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1775,6 +1805,10 @@ nav a:hover {
 }
 
 @media (max-width: 767px) {
+  .phone {
+    font-size: 1.5rem;
+  }
+
   h2,
   .technology-title,
   .form .form-title,
@@ -1805,8 +1839,7 @@ nav a:hover {
   }
 
   .header-right {
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 66px;
   }
 
   .header-button {

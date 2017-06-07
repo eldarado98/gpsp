@@ -1,3 +1,12 @@
+// nav
+(function () {
+  function toggle(event) {
+    var classList = event.currentTarget.classList;
+    classList[classList.contains('nav-hidden') ? 'remove' : 'add']('nav-hidden');
+  }
+  document.getElementsByClassName('nav-trigger')[0].addEventListener('click', toggle);
+})();
+
 // slider
 (function () {
   function Slider(el) {
@@ -208,8 +217,8 @@ function initMap() {
     this.elPrev.addEventListener('click', this.prev);
     this.elNext.addEventListener('click', this.next);
     this.elSlides.addEventListener('click', this.open);
-    document.getElementsByClassName('projects-prev')[0].addEventListener('click', this.prev);
-    document.getElementsByClassName('projects-next')[0].addEventListener('click', this.next);
+    el.parentNode.getElementsByClassName('projects-prev')[0].addEventListener('click', this.prev);
+    el.parentNode.getElementsByClassName('projects-next')[0].addEventListener('click', this.next);
   }
 
   Gallery.prototype.prev = function () {
