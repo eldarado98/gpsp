@@ -52,6 +52,7 @@ html {
   line-height: 1.15;
   background: #fff;
   color: #161616;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -230,6 +231,7 @@ nav li {
 nav a {
   padding: 4px 10px;
   border-bottom: 2px solid transparent;
+  -webkit-transition: border-color 300ms ease;
   transition: border-color 300ms ease;
 }
 
@@ -963,6 +965,7 @@ nav a:hover {
 }
 
 .gallery-slide:not(:first-child) {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 

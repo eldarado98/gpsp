@@ -1,4 +1,4 @@
-// nav
+// toggle nav button
 (function () {
   function toggle(event) {
     var classList = event.currentTarget.classList;
@@ -7,7 +7,7 @@
   document.getElementsByClassName('nav-trigger')[0].addEventListener('click', toggle);
 })();
 
-// slider
+// sliders
 (function () {
   function Slider(el) {
     this.currentIndex = 0;
@@ -62,7 +62,7 @@
   }
 })();
 
-// show more
+// show more buttons
 (function () {
   function showMore(event) {
     event.preventDefault();
@@ -174,7 +174,7 @@
   }
 })();
 
-// Map
+// map
 function initMap() {
   var center = { lat: 52.8973962, lng: 24.8398293 };
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -277,4 +277,22 @@ function initMap() {
   for (var i = 0; i < gallery.length; i++) {
     new Gallery(gallery[i]);
   }
+})();
+
+// smooth scroll
+(function () {
+  if ('scrollBehavior' in document.documentElement.style) return;
+  window.addEventListener('click', function (event) {
+    if (event.target.tagName !== 'A') return;
+    var href = event.target.getAttribute('href');
+    if (href.charAt(0) !== '#') return;
+    var target = document.getElementById(href.substr(1));
+    if (!target) return;
+    event.preventDefault();
+    var rect = target.getBoundingClientRect();
+    if ('history' in window) {
+      window.history.replaceState(undefined, undefined, href);
+    }
+    window.scroll({ top: window.pageYOffset + rect.top, left: 0, behavior: 'smooth' });
+  });
 })();
